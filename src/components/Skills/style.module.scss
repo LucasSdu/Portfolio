@@ -1,0 +1,55 @@
+
+  
+ .text-container {
+    padding: 50px; /* Erhöhe das Padding, um das Rechteck größer zu machen */
+    background-color: #FFFFFF; 
+    color: #151310;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto; /* Setze eine Breite, um das Rechteck größer zu machen */
+    height: 60%; /* Höhe wird durch den Inhalt bestimmt, kann auch festgelegt werden */
+    max-width: 1000px; /* Optionale Begrenzung der maximalen Breite */
+}
+
+  .firstname {
+    font-size: 2vw; /* Base font size */
+}
+
+/* Different fonts for each letter */
+.letter1 { font-family: 'Mulett', sans-serif; }
+.letter2 { font-family: 'Sloppy', serif; }
+.letter3 { font-family: 'Sloppy', monospace; }
+.letter4 { font-family: 'Mulett', serif; }
+.letter5 { font-family: 'Mulett', serif; }
+.letter6 { font-family: 'Mulett', sans-serif; }
+.letter7 { font-family: 'Sloppy', serif; }
+.letter8 { font-family: 'Sloppy', monospace; }
+.letter9 { font-family: 'Mulett', serif; }
+.letter10 { font-family: 'Mulett', serif; }
+.letter11 { font-family: 'Sloppy', serif; }
+.letter12 { font-family: 'Sloppy', monospace; }
+.letter13 { font-family: 'Mulett', serif; }
+.letter14 { font-family: 'Mulett', serif; }
+.letter15 { font-family: 'Sloppy', monospace; }
+  
+  
+
+@media (max-width: 768px) {
+    .text-container {
+        padding: 20px; /* Reduziertes Padding für mobile Geräte */
+        width: 90%; /* Verringere die Breite auf mobilen Geräten */
+        max-width: 90%; /* Begrenze die Breite noch mehr */
+        height: auto; /* Lass die Höhe automatisch vom Inhalt bestimmen */
+    }
+  
+    .firstname {
+        font-size: 8vw;
+        margin-top: 10px; /* Größere Schriftgröße für mobile Geräte */
+    }
+}
+  

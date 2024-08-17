@@ -1,0 +1,87 @@
+.nav{
+    height: 100%;
+    padding: 100px 40px 50px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .body{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        .linkConatainer{
+            perspective: 120px;
+            perspective-origin: right;
+        }
+        a{
+            color:#151310;
+            text-decoration: none;
+            font-size: 46px;
+            font-family: "Feoni", sans-serif;
+        }
+        a::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: #FD3D00;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+            
+        }
+        
+        a:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        
+        a {
+          margin-right: 50%;
+          color: #151310;
+          font-family: "Feoni", sans-serif;
+          
+          &::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: #FD3D00;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+      
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+      
+}
+@media (max-width: 768px) {
+  .nav {
+      .body {
+          .linkContainer {
+              a {
+                  font-size: 30px; // Schriftgröße für mobile Ansichten
+              }
+          }
+      }
+  }
+}

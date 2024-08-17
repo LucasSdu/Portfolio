@@ -1,0 +1,75 @@
+
+  
+  .container {
+    background-color: #f0f0f0; /* Weißer Hintergrund für die gesamte Seite */
+    margin: 0; /* Entfernt den Standard-Margin des Browsers */
+    padding: 0; /* Entfernt den Standard-Padding des Browsers */
+    display: flex;
+    flex-direction: column; /* Anordnung von Überschrift, Text und Bildern in einer Spalte */
+    gap: 30px; /* Abstand zwischen den Elementen */
+    padding-left: 20px; /* Padding um den gesamten Container */
+    padding-right: 20px;
+  }
+  
+  .title {
+    margin-top: 100px;
+    text-align: center; /* Zentriert die Überschrift */
+    font-size: 2rem; /* Größe der Überschrift */
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+  }
+  
+  .text {
+ 
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+  }
+
+  .videoWrapper {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Zentriert das Video horizontal */
+    padding: 20px; /* Abstand zum Rand des Bildschirms */
+    width: 100%;
+    max-width: 800px; /* Maximale Breite des Videos */
+    margin-bottom: 40px; /* Abstand nach dem Video */
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .imageWrapper {
+    display: flex;
+    justify-content: center; /* Zentriert das Bild horizontal */
+    padding: 20px; /* Abstand zum Rand des Bildschirms */
+  }
+  
+  .imageWrapper.left {
+    justify-content: flex-start; /* Bild an den linken Rand ausrichten */
+  }
+  
+  .imageWrapper.right {
+    justify-content: flex-end; /* Bild an den rechten Rand ausrichten */
+  }
+  
+  .imageWrapper.center {
+    justify-content: center; /* Bild zentrieren */
+  }
+  
+  .imageWrapper img {
+    max-width: 100%; /* Bild innerhalb des Containers skalieren */
+    height: auto; /* Höhe automatisch anpassen */
+    border-radius: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .imageWrapper {
+        padding-bottom: 300px; /* Erhöht den Abstand um den Container der Bilder */
+      }
+
+    .imageWrapper img {
+      max-width: 80%; /* Reduziert die maximale Breite des Bildes auf 80% der Containerbreite */
+      height: auto; /* Höhe weiterhin automatisch anpassen */
+    }
+  }

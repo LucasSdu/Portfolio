@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom @font-face declarations */
+
+
+@font-face {
+  font-family: 'Brush';
+  src: url('../../public/fonts/BlowBrush.ttf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sloppy';
+  src: url('../../public/fonts/Swomp-Sloppy.ttf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulett';
+  src: url('../../public/fonts/Zodiak-Regular.otf');
+  font-weight: light;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Feoni';
+  src: url('../../public/fonts/Geist-Light.otf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FeoniMedium';
+  src: url('../../public/fonts/Geist-Bold.otf');
+  font-weight: medium;
+  font-style: normal;
+}
+

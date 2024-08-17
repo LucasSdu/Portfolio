@@ -1,0 +1,45 @@
+/* Base styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20vw; /* Abstand zwischen den Elementen */
+  padding: 0 10vw; /* Gleichmäßiger Abstand von den Seiten */
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.body {
+  color: #151310;
+  font-family: 'Feoni', sans-serif;
+  font-size: 4vw; /* Basis Schriftgröße */
+  width: 100%; /* Volle Breite für gleichmäßigen Abstand */
+}
+
+.lineMask {
+  overflow: hidden;
+  display: flex;
+}
+
+.lineMask p {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Media Queries für mobile Geräte */
+@media (max-width: 768px) { /* Maximalbreite für mobile Geräte */
+  .container {
+      gap: 40vw; /* Reduziere den Abstand zwischen den Elementen */
+      padding: 0 5vw; /* Reduziere den horizontalen Abstand */
+      margin-top: 150px; /* Reduziere den oberen Margin */
+      margin-bottom: 150px; /* Reduziere den unteren Margin */
+  }
+
+  .body {
+      font-size: 6vw; /* Erhöhe die Schriftgröße für mobile Geräte */
+  }
+
+  .lineMask p {
+      font-size: 9vw; /* Erhöhe die Schriftgröße innerhalb der lineMask */
+  }
+}

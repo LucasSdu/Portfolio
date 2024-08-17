@@ -1,0 +1,50 @@
+.introduction {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column; // Flexbox-Layout für vertikale Ausrichtung
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    background-color: #FFFFFF;
+
+    svg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: calc(100% + 300px);
+
+        path {
+            fill: #FFFFFF;
+        }
+    }
+
+    p {
+        display: flex;
+        color: #0156CF;
+        font-size: 42px;
+        font-family: "Pixel", sans-serif;
+        align-items: center;
+        position: relative; 
+        z-index: 1;
+        margin-bottom: 10px;
+    }
+
+    .loader {
+        width: 10%;
+        height: 5px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 10px;
+        position: relative;
+        z-index: 1;
+
+        .progressBar {
+            height: 100%;
+            background-color: #0156CF;
+            transition: width 0.3s ease;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+
+  
+  .container {
+    background-color: #f0f0f0; /* Weißer Hintergrund für die gesamte Seite */
+    margin: 0; /* Entfernt den Standard-Margin des Browsers */
+    padding: 0; /* Entfernt den Standard-Padding des Browsers */
+    display: flex;
+    flex-direction: column; /* Anordnung von Überschrift, Text und Bildern in einer Spalte */
+    gap: 30px; /* Abstand zwischen den Elementen */
+    padding-left: 20px; /* Padding um den gesamten Container */
+    padding-right: 20px;
+  }
+  
+  .title {
+    margin-top: 100px;
+    text-align: center; /* Zentriert die Überschrift */
+    font-size: 2rem; /* Größe der Überschrift */
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+  }
+  
+  .text {
+ 
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+  }

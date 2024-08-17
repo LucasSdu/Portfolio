@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,3 +33,43 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Custom @font-face declarations */
+
+@font-face {
+  font-family: 'Brush';
+  src: url('../../public/fonts/BlowBrush.ttf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sloppy';
+  src: url('../../public/fonts/Swomp-Sloppy.ttf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulett';
+  src: url('../../public/fonts/Zodiak-Regular.otf');
+  font-weight: light;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Feoni';
+  src: url('../../public/fonts/Geist-Light.otf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FeoniMedium';
+  src: url('../../public/fonts/Geist-Bold.otf');
+  font-weight: medium;
+  font-style: normal;
+}
+

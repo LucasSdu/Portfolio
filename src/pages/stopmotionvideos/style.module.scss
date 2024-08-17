@@ -1,0 +1,67 @@
+.container {
+    background-color: #f0f0f0; /* Hintergrundfarbe für die gesamte Seite */
+    margin: 0; /* Entfernt den Standard-Margin des Browsers */
+    padding: 20px; /* Padding um den gesamten Container */
+    display: flex;
+    flex-direction: column; /* Anordnung von Überschrift, Text und Videos in einer Spalte */
+    gap: 30px; /* Abstand zwischen den Elementen */
+  }
+  
+  .title {
+    margin-top: 100px;
+    text-align: center; /* Zentriert die Überschrift */
+    font-size: 2rem; /* Größe der Überschrift */
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+  }
+  
+  .text {
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+  }
+  
+  .videoGrid {
+    display: flex;
+    flex-direction: column; /* Videos untereinander anordnen */
+    gap: 30px; /* Abstand zwischen den Videos */
+  }
+  
+  .videoWrapper {
+    display: flex;
+    flex-direction: column; /* Titel und Video untereinander anordnen */
+    align-items: center; /* Standard-Ausrichtung: Videos zentrieren */
+    padding: 20px; /* Abstand zum Rand des Bildschirms */
+  }
+  
+  .videoWrapper.left {
+    align-items: flex-start; /* Video links ausrichten */
+  }
+  
+  .videoWrapper.right {
+    align-items: flex-end; /* Video rechts ausrichten */
+  }
+  
+  .videoWrapper.center {
+    align-items: center; /* Video zentrieren */
+  }
+  
+  .videoTitle {
+    text-align: center; /* Titel zentrieren */
+    font-size: 1.5rem; /* Größe des Titels */
+    font-family: "Feoni", sans-serif;
+    color: #151310;
+    margin-bottom: 10px; /* Abstand unter dem Titel */
+  }
+  
+  .video {
+    width: 80%; /* Video soll die gesamte Breite des Containers ausfüllen */
+    height: auto;
+  }
+  
+  /* Media Query für mobile Ansicht */
+  @media (max-width: 768px) {
+    .video {
+      width: 100%; /* Videos auf mobilen Geräten die volle Breite einnehmen */
+    }
+  }
+  
