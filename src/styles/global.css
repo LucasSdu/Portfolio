@@ -37,12 +37,7 @@ body {
 /* Custom @font-face declarations */
 
 
-@font-face {
-  font-family: 'Brush';
-  src: url('../../public/fonts/BlowBrush.ttf');
-  font-weight: light;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'Sloppy';
@@ -53,7 +48,7 @@ body {
 
 @font-face {
   font-family: 'Mulett';
-  src: url('../../public/fonts/Zodiak-Regular.otf');
+  src: url('../../public/fonts/medio.otf');
   font-weight: light;
   font-style: normal;
 }

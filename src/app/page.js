@@ -61,7 +61,6 @@ export default function Home() {
         <section id="skills">
           <Skills />
         </section>
-        <div className="mb-72"></div>
         <section id="myprojects">
           <Projects />
         </section>
