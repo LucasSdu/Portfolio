@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import styles from "./style.module.scss";
-import Image from "next/image";
 import Footer from '../../components/Footer';
 
 export default function ContactPage() {
