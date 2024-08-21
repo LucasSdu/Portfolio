@@ -1,65 +1,63 @@
 .introduction {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  background-color: #141516;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 300px);
+
+    path {
+      fill: #141516;
+    }
+  }
+
+  .imageContainer {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .loaderContainer {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    z-index: 100;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .loader {
+    width: 100%;
+    height: 5px;
     background-color: #141516;
+    border-radius: 5px;
     overflow: hidden;
+    position: relative;
+  }
 
-    svg {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: calc(100% + 300px);
+  .progressBar {
+    height: 100%;
+    background-color: #f0f0f0;
+    transition: width 0.3s ease;
+  }
 
-        path {
-            fill: #141516;
-        }
-    }
-
-
-    .imageContainer {
-        width: 200px;
-        height: 300px;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 10px;
-    }
-
-    .loaderContainer {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 10px;
-    }
-
-    .loader {
-        width: 100%; /* Fortschrittsbalken nimmt die gesamte Breite ein */
-        height: 5px;
-        background-color: #141516;
-        border-radius: 5px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .progressBar {
-        height: 100%;
-        background-color: #f0f0f0;
-        transition: width 0.3s ease;
-        
-    }
-
-    .progressText {
-        color: #f0f0f0;
-        font-size: 18px;
-        font-family: "Feoni", sans-serif;
-        position: absolute;
-        bottom: 30px; /* Position der Prozentanzeige */
-    }
+  .progressText {
+    color: #f0f0f0;
+    font-size: 18px;
+    font-family: "Feoni", sans-serif;
+    position: absolute;
+    bottom: 30px;
+  }
 }

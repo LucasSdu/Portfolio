@@ -1,11 +1,11 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/no-unescaped-entities */
-import React, { useRef } from 'react';
-import { motion, useTransform, useScroll } from 'framer-motion';
+import React, { useRef } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
 import styles from "./style.module.scss";
-import Magnetic from '../Magnetic';
+import Magnetic from "../Magnetic";
 
-
-export default function Index({isActive, toggleMenu}) {
+export default function Index({ isActive, toggleMenu }) {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -18,48 +18,44 @@ export default function Index({isActive, toggleMenu}) {
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
 
   const handleContactButtonClick = () => {
-    window.location.href = 'mailto:lucas.sdunnek@gmail.com';
+    window.location.href = "mailto:lucas.sdunnek@gmail.com";
   };
 
   return (
     <motion.div style={{ y }} ref={container} className={styles.contact}>
       <div className={styles.body}>
         <div className={styles.title}>
-         
-       
-  <div className={styles.firstword}>
-    {"Get in".split("").map((letter, index) => (
-      <span key={index} className={styles[`letter${index + 1}`]}>
-        {letter}
-      </span>
-    ))}
-  </div>
-  <div className={styles.lastword}>
-    {"Contact".split("").map((letter, index) => (
-      <span key={index} className={styles[`letter${index + 1}`]}>
-        {letter}
-      </span>
-    ))}
-  </div>
-         
-     
-      
+          <div className={styles.firstword}>
+            {"Get in".split("").map((letter, index) => (
+              <span key={index} className={styles[`letter${index + 1}`]}>
+                {letter}
+              </span>
+            ))}
+          </div>
+          <div className={styles.lastword}>
+            {"Contact".split("").map((letter, index) => (
+              <span key={index} className={styles[`letter${index + 1}`]}>
+                {letter}
+              </span>
+            ))}
+          </div>
 
           <motion.div style={{ x }} className={styles.buttonContainer}>
-          <div className={styles.button} onClick={handleContactButtonClick}>
-        <motion.div 
-            className={styles.slider}
-            animate={{top: isActive ? "-100%" : "0%"}}
-            transition={{ duration: 0.5, type: "tween", ease: [0.76, 0, 0.24, 1]}}
-        >
-            <div 
-                className={styles.el}
-            >
-                <PerspectiveText label="Get in Touch"/>
+            <div className={styles.button} onClick={handleContactButtonClick}>
+              <motion.div
+                className={styles.slider}
+                animate={{ top: isActive ? "-100%" : "0%" }}
+                transition={{
+                  duration: 0.5,
+                  type: "tween",
+                  ease: [0.76, 0, 0.24, 1],
+                }}
+              >
+                <div className={styles.el}>
+                  <PerspectiveText label="Get in Touch" />
+                </div>
+              </motion.div>
             </div>
-        </motion.div>
-    </div>
-            
           </motion.div>
           <motion.svg
             style={{ rotate, scale: 2 }}
@@ -75,9 +71,6 @@ export default function Index({isActive, toggleMenu}) {
               fill="#151310"
             />
           </motion.svg>
-
-  
-
         </div>
 
         <div className={styles.info}>
@@ -89,16 +82,15 @@ export default function Index({isActive, toggleMenu}) {
           </div>
           <div>
             <span>
-            
               <Magnetic>
-              <a href="/impressum" className={styles.link}>
-                <p>Impressum</p>
+                <a href="/impressum" className={styles.link}>
+                  <p>Impressum</p>
                 </a>
               </Magnetic>
             </span>
             <Magnetic>
-            <a href="/Datenschutz" className={styles.link}>
-              <p>Datenschutz</p>
+              <a href="/Datenschutz" className={styles.link}>
+                <p>Datenschutz</p>
               </a>
             </Magnetic>
           </div>
@@ -108,11 +100,11 @@ export default function Index({isActive, toggleMenu}) {
   );
 }
 
-function PerspectiveText({label}) {
-  return (    
-      <div className={styles.perspectiveText}>
-          <p>{label}</p>
-          <p>{label}</p>
-      </div>
-  )
+function PerspectiveText({ label }) {
+  return (
+    <div className={styles.perspectiveText}>
+      <p>{label}</p>
+      <p>{label}</p>
+    </div>
+  );
 }

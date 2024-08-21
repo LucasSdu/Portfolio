@@ -1,4 +1,4 @@
-"use client"; // This line marks the file as a Client Component
+"use client";
 
 import { useState, useEffect, useCallback } from "react";
 import Button from "./Button";
@@ -10,13 +10,12 @@ const Index = () => {
   const [isActive, setIsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Set initial value of isMobile once the component is mounted
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Set initial value
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {

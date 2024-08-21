@@ -1,7 +1,7 @@
 
   
  .text-container {
-    padding: 50px; /* Erhöhe das Padding, um das Rechteck größer zu machen */
+    padding: 50px;
     background-color: #FFFFFF; 
     color: #151310;
     position: relative;
@@ -11,45 +11,49 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: auto; /* Setze eine Breite, um das Rechteck größer zu machen */
-    height: 60%; /* Höhe wird durch den Inhalt bestimmt, kann auch festgelegt werden */
-    max-width: 1000px; /* Optionale Begrenzung der maximalen Breite */
+    width: 40%; 
+    height: 60%; 
+    max-width: 500px; 
 }
 
-  .firstname {
-    font-size: 2vw; /* Base font size */
+  .text {
+    font-size: 50px; 
 }
 
-/* Different fonts for each letter */
-.letter1 { font-family: 'Mulett', sans-serif; }
+.subtext {
+    font-family: 'Mullet', serif;
+    font-size: 20px;
+}
+
+.letter1 { font-family: 'Mulett', serif; }
 .letter2 { font-family: 'Sloppy', serif; }
-.letter3 { font-family: 'Sloppy', monospace; }
+.letter3 { font-family: 'Mullet', serif; }
 .letter4 { font-family: 'Mulett', serif; }
 .letter5 { font-family: 'Mulett', serif; }
-.letter6 { font-family: 'Mulett', sans-serif; }
-.letter7 { font-family: 'Sloppy', serif; }
-.letter8 { font-family: 'Sloppy', monospace; }
-.letter9 { font-family: 'Mulett', serif; }
+.letter6 { font-family: 'Mulett', serif; }
+.letter7 { font-family: 'Mullet', serif; }
+.letter8 { font-family: 'Mullet', serif; }
+.letter9 { font-family: 'Sloppy', serif; }
 .letter10 { font-family: 'Mulett', serif; }
-.letter11 { font-family: 'Sloppy', serif; }
-.letter12 { font-family: 'Sloppy', monospace; }
+.letter11 { font-family: 'Mullet', serif; }
+.letter12 { font-family: 'Mullet', serif; }
 .letter13 { font-family: 'Mulett', serif; }
 .letter14 { font-family: 'Mulett', serif; }
-.letter15 { font-family: 'Sloppy', monospace; }
+.letter15 { font-family: 'Sloppy', serif; }
   
   
 
 @media (max-width: 768px) {
     .text-container {
-        padding: 20px; /* Reduziertes Padding für mobile Geräte */
-        width: 90%; /* Verringere die Breite auf mobilen Geräten */
-        max-width: 90%; /* Begrenze die Breite noch mehr */
-        height: auto; /* Lass die Höhe automatisch vom Inhalt bestimmen */
+        padding: 20px; 
+        width: 90%; 
+        max-width: 90%; 
+        height: auto; 
     }
   
-    .firstname {
+    .text {
         font-size: 8vw;
-        margin-top: 10px; /* Größere Schriftgröße für mobile Geräte */
+        margin-top: 10px;
     }
 }
   

@@ -1,125 +1,125 @@
 .body {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .timeLocationContainer {
-    position: absolute;
-    top: 20px; /* Abstand von oben */
-    left: 30px; /* Abstand von links */
-    display: flex;
-    align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
 }
 
 .locationText {
-    font-size: 1vw; /* Base font size */
-    color: #151310;
-    font-family: 'FeoniMedium', sans-serif;
+  font-size: 20px;
+  color: #151310;
+  font-family: "FeoniMedium", sans-serif;
 }
-
 
 .name {
-    position: absolute;
-    top: 20px;
-    left: 50%; /* 40% from the left */
-    transform: translateX(-50%); /* Center horizontally at the left position */
-    font-size: 1vw; /* Base font size */
-    color: #151310;
-    font-family: 'FeoniMedium', sans-serif;
-    white-space: nowrap; /* Prevent text from wrapping to the next line */
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1vw;
+  color: #151310;
+  font-family: "FeoniMedium", sans-serif;
+  white-space: nowrap;
 }
 
-
 .imageWrapper {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    height: 100%; /* Full height to center the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .imageContainer {
-    position: relative;
-    width: 300px; /* Adjust width as needed */
-    height: 400px; /* Adjust height as needed */
-   
+  position: relative;
+  width: 300px;
+  height: 400px;
 }
 
 .imageContainer img {
-    object-fit: cover;
-    z-index: 10;
+  object-fit: cover;
+  z-index: 10;
 }
-
 
 .firstname {
-    color: #FD3D00;
-    position: absolute;
-    top: 20px; /* Position at the bottom edge of the viewport */
-    left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
-    font-size: 15vw; /* Base font size */
-    text-align: center;
-    width: 100%;
+  color: #fd3d00;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15vw;
+  text-align: center;
+  width: 100%;
 }
-
-/* Different fonts for each letter */
-.letter1 { font-family: 'Mulett', sans-serif; }
-.letter2 { font-family: 'Sloppy', serif; }
-.letter3 { font-family: 'Sloppy', monospace; }
-.letter4 { font-family: 'Mulett', serif; }
-.letter5 { font-family: 'Mulett', serif; }
-
 
 .lastname {
-    color: #FD3D00;
-    position: absolute;
-    bottom: 20px; /* Position at the bottom edge of the viewport */
-    left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
-    font-size: 15vw; /* Base font size */
-    text-align: center;
-    width: 100%;
+  color: #fd3d00;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15vw;
+  text-align: center;
+  width: 100%;
 }
 
-/* Different fonts for each letter */
-.letter1 { font-family: 'Mulett', sans-serif; }
-.letter2 { font-family: 'Sloppy', serif; }
-.letter3 { font-family: 'Sloppy', monospace; }
-.letter4 { font-family: 'Mulett', serif; }
-.letter5 { font-family: 'Mulett', serif; }
-.letter6 { font-family: 'Mulett', serif; }
-.letter7 { font-family: 'Sloppy', serif; }
-
+.letter1 {
+  font-family: "Mulett", serif;
+}
+.letter2 {
+  font-family: "Sloppy", serif;
+}
+.letter3 {
+  font-family: "Mulett", serif;
+}
+.letter4 {
+  font-family: "Mulett", serif;
+}
+.letter5 {
+  font-family: "Mulett", serif;
+}
+.letter6 {
+  font-family: "Mulett", serif;
+}
+.letter7 {
+  font-family: "Sloppy", serif;
+}
 
 @media (max-width: 768px) {
-    .timeLocationContainer {
-      position: relative; /* Positionierung für den mobilen Zustand aufheben */
-      top: 10%; /* Reset der Top-Position */
-      left: auto; /* Reset der Left-Position */
-      justify-content: center; /* Zentriere den Text */
-      font-size: 3vw; /* Vergrößerte Schriftgröße für Zeit/Ort auf Mobilgeräten */
-      text-align: center; /* Text zentrieren */
-    }
-  
-    .name {
-        top:8%;
-        font-size: 3vw;
-    }
-  
-    .locationText {
-      font-size: 3vw; /* Vergrößerte Schriftgröße für den Standorttext */
-    }
-  
-    .firstname {
-      top: 18%; /* Mehr Abstand von oben */
-      font-size: 20vw; /* Größere Schriftgröße für Mobilgeräte */
-    }
-  
-    .lastname {
-      bottom: 16%; /* Mehr Abstand von unten */
-      font-size: 20vw; /* Größere Schriftgröße für Mobilgeräte */
-    }
+  .timeLocationContainer {
+    position: relative;
+    top: 10%;
+    left: auto;
+    justify-content: center;
+    font-size: 3vw;
+    text-align: center;
   }
-  
+
+  .name {
+    top: 8%;
+    font-size: 3vw;
+  }
+
+  .locationText {
+    font-size: 3vw;
+  }
+
+  .firstname {
+    top: 18%;
+    font-size: 20vw;
+  }
+
+  .lastname {
+    bottom: 16%;
+    font-size: 20vw;
+  }
+}

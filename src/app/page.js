@@ -5,9 +5,7 @@ import Lenis from "@studio-freight/lenis";
 import styles from "./page.module.scss";
 import Footer from "../components/Footer";
 import Projects from "../components/Projects";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import Heading from "../components/Heading";
 import Skills from "../components/Skills";
 import AboutMe from "../components/Aboutme";
 import Text from "../components/Text";
@@ -16,6 +14,7 @@ import Preloader from "../components/Preloader";
 
 export default function Home() {
   const [isLoading] = useState(true);
+
   const container = useRef(null);
   const refs = useRef([]);
   const textContainer = useRef(null);
@@ -29,11 +28,7 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
-
-
-    
   }, []);
-
 
   const createAnimation = () => {
     gsap.to(refs.current, {
@@ -53,11 +48,11 @@ export default function Home() {
     <div
       className={`relative min-h-screen flex flex-col cursor-default bg-white100 ${styles["full-height-container"]}`}
     >
-        <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence> 
+      </AnimatePresence>
 
-      <main  className={styles.main}>
+      <main className={styles.main}>
         <section id="aboutme">
           <AboutMe />
         </section>
@@ -68,7 +63,6 @@ export default function Home() {
         </section>
         <div className="mb-72"></div>
         <section id="myprojects">
-          <Heading mainText="Pro" subText="jects" />
           <Projects />
         </section>
       </main>

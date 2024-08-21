@@ -1,20 +1,20 @@
 
   
   .container {
-    background-color: #f0f0f0; /* Weißer Hintergrund für die gesamte Seite */
-    margin: 0; /* Entfernt den Standard-Margin des Browsers */
-    padding: 0; /* Entfernt den Standard-Padding des Browsers */
+    background-color: #f0f0f0; 
+    margin: 0; 
+    padding: 0; 
     display: flex;
-    flex-direction: column; /* Anordnung von Überschrift, Text und Bildern in einer Spalte */
-    gap: 30px; /* Abstand zwischen den Elementen */
-    padding-left: 20px; /* Padding um den gesamten Container */
-    padding-right: 20px; /* Padding um den gesamten Container */
+    flex-direction: column; 
+    gap: 30px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
   }
   
   .title {
     margin-top: 100px;
-    text-align: center; /* Zentriert die Überschrift */
-    font-size: 2rem; /* Größe der Überschrift */
+    text-align: center; 
+    font-size: 2rem; 
     font-family: "Feoni", sans-serif;
     color: #151310;
   }
@@ -26,35 +26,35 @@
   }  
   .imageWrapper {
     display: flex;
-    justify-content: center; /* Zentriert das Bild horizontal */
-    padding: 20px; /* Abstand zum Rand des Bildschirms */
+    justify-content: center; 
+    padding: 20px; 
   }
   
   .imageWrapper.left {
-    justify-content: flex-start; /* Bild an den linken Rand ausrichten */
+    justify-content: flex-start; 
   }
   
   .imageWrapper.right {
-    justify-content: flex-end; /* Bild an den rechten Rand ausrichten */
+    justify-content: flex-end; 
   }
   
   .imageWrapper.center {
-    justify-content: center; /* Bild zentrieren */
+    justify-content: center; 
   }
   
   .imageWrapper img {
-    max-width: 100%; /* Bild innerhalb des Containers skalieren */
-    height: auto; /* Höhe automatisch anpassen */
+    max-width: 100%; 
+    height: auto; 
     border-radius: 5px;
   }
   
   @media (max-width: 768px) {
     .imageWrapper {
-        padding-bottom: 300px; /* Erhöht den Abstand um den Container der Bilder */
+        padding-bottom: 300px; 
       }
 
     .imageWrapper img {
-      max-width: 80%; /* Reduziert die maximale Breite des Bildes auf 80% der Containerbreite */
-      height: auto; /* Höhe weiterhin automatisch anpassen */
+      max-width: 80%; 
+      height: auto; 
     }
   }
