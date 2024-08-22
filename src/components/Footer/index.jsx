@@ -29,7 +29,7 @@ export default function Index({ isActive, toggleMenu }) {
               </span>
             ))}
           </div>
-          <div className={`${styles['svg-container']} relative flex items-center justify-center`}>
+          <div className={`${styles['svg']} relative flex items-center justify-center`}>
             <motion.svg
               width="200"
               height="200"

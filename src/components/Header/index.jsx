@@ -1,45 +1,45 @@
-import React, { useState, useEffect } from "react";
-import Button from "./Button";
-import styles from "./style.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
-import Nav from "./Nav";
+/* eslint-disable react-hooks/rules-of-hooks */
+
+'use client';
+import React, { useState, useEffect } from 'react';
+import Button from './Button';
+import styles from './style.module.scss';
+import { AnimatePresence, motion } from 'framer-motion';
+import Nav from './Nav';
 
 const Index = () => {
-  const [isActive, setIsActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const toggleMenu = () => {
-    setIsActive((prev) => !prev);
-  };
 
   const variants = {
     open: {
       width: isMobile ? 320 : 480,
       height: isMobile ? 650 : 650,
-      top: "0px",
-      left: "0px",
-      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+      top: "-25px",
+      left: "25px",
+      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] }
     },
     closed: {
-      width: 0,
-      height: 0,
+      width: 100,
+      height: 40,
+      borderRadius: "25px",
       top: "0px",
       left: "0px",
-      transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
-    },
+      transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] }
+    }
   };
 
   return (
@@ -50,9 +50,11 @@ const Index = () => {
         animate={isActive ? "open" : "closed"}
         initial="closed"
       >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence>
+          {isActive && <Nav />}
+        </AnimatePresence>
       </motion.div>
-      <Button isActive={isActive} toggleMenu={toggleMenu} />
+      <Button isActive={isActive} toggleMenu={() => setIsActive(!isActive)} />
     </div>
   );
 };

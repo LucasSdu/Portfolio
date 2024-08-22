@@ -1,14 +1,22 @@
-.header {
+.header{
   position: fixed;
-  right: 0px;
-  top: 0px;
+  right: 35px;
+  top: 35px;
   z-index: 99;
+
+  .menu{
+      position: relative;
+      width: 480px;
+      height: 650px;
+      background-color: #D7D7D7;
+      border-radius: 5px;
+  }
 }
 
-.button {
-  mix-blend-mode: difference; /* Nur der Button bekommt den blend-mode */
-  background-color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+@media (max-width: 768px) {
+
+    .header{
+      right: 19px;
+  top: 19px;
+    }
 }

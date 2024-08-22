@@ -124,46 +124,49 @@
     .contact {
         padding-top: 100px;
         padding-left: 10px;
-        padding-right: 20px;
+        padding-right: 10px;
 
-        .title {
-            padding-bottom: 50px;
-
-            .firstword,
-            .lastword {
-                font-size: 20vw;
-                margin-bottom: 0;
-            }
-
-            .buttonContainer {
-                position: absolute;
-                left: 70px;
-                top: 70px;
-            }
-
-            .button {
-                width: 130px;
-                height: 130px;
-                .slider {
-                    .el {
-                        font-size: 3vw;
-                    }
+        .body {
+            padding-top: 200px;
+         
+    
+            .title {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                .firstword {
+                    color: #151310;
+                    font-size: 20vw;
+                    margin-top: 100px;
+                    margin-bottom: 100px;
                 }
-            }
+    
+                .lastword {
+                    color: #151310;
+                    font-size: 20vw;
+                    margin-top: -50px;
+                }
+
+
+          
 
             svg {
-                top: 1%;
-                right: 20px;
+                top: -170px;
+                align-items: center;
                 left: auto;
-                transform: translateY(-50%);
+                width: 100px;
+               
             }
         }
 
         .info {
+            left: 5%;
             flex-direction: column;
             margin-top: 100px;
             gap: 10px;
-            left: 0; 
+           
 
             div {
                 flex-direction: column;
@@ -176,4 +179,5 @@
             }
         }
     }
+}
 }

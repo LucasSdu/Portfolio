@@ -1,6 +1,6 @@
-import React from 'react';
-import { Links, footerLinks } from './data';
-import styles from './style.module.scss';
+import React from 'react'
+import { Links, footerLinks } from './data'
+import styles from './style.module.scss'
 import { motion } from 'framer-motion';
 import Magnetic from '../../Magnetic'; 
 
@@ -57,8 +57,8 @@ export default function Index() {
           Links.map((link, i) => {
             return (
               <div key={i} className={styles.linkContainer}>
+                
                   <motion.div
-                   href={link.href}
                     custom={i}
                     variants={perspective}
                     animate="enter"
@@ -67,6 +67,7 @@ export default function Index() {
                   >
                     <a href={link.href}>{link.title}</a>
                   </motion.div>
+                
               </div>
             )
           })
@@ -93,6 +94,7 @@ export default function Index() {
           })
         }
       </div>
+
     </div>
   )
 }
