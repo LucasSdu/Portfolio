@@ -7,19 +7,12 @@ import Magnetic from "../Magnetic";
 export default function Index({ isActive, toggleMenu }) {
   const container = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end end"],
-  });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
 
-  const handleContactButtonClick = () => {
-    window.location.href = "mailto:lucas.sdunnek@gmail.com";
-  };
+
 
   return (
-    <motion.div style={{ y }} ref={container} className={styles.contact}>
+    <motion.div className={styles.contact}>
       <div className={styles.body}>
         <div className={styles.title}>
           <div className={styles.firstword}>
