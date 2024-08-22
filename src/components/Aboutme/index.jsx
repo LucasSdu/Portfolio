@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/yuvfjrzrgyunfsklujrc.jpg",
+    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/DSCF4018_hzd1om.jpg",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Index() {
       </div>
       <div className={styles.timeLocationContainer}>
         <span className={styles.locationText}>
-          Germany (<TimeInGermany />){" "}
+          From Germany (<TimeInGermany />){" "}
         </span>
       </div>
 

@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const images = ["/images/Img1.jpg", "/images/Img2.jpg", "/images/Img3.jpg"];
+const images = [
+  "https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/wr6xc6idsw88r74y8ayn.jpg",
+  "https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/rojmnanadmvaatmrnipc.jpg",
+  "https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/g3nwqpjsyordz8vts3d2.jpg",
+];
 
 const IMAGE_DISPLAY_TIME = 1000;
 const PROGRESS_DURATION = 3000;
@@ -60,8 +64,8 @@ export default function Index() {
             <Image
               src={images[index]}
               alt={`PreLoader Image ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }} // Aktualisierte Props
               priority
             />
           </div>

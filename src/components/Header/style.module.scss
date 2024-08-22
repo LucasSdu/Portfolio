@@ -3,10 +3,12 @@
   right: 0px;
   top: 0px;
   z-index: 99;
+}
 
-  .menu {
-    position: relative;
-
-    background-color: #ffffff;
-  }
+.button {
+  mix-blend-mode: difference; /* Nur der Button bekommt den blend-mode */
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }

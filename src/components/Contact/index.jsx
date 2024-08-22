@@ -1,29 +1,25 @@
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-html-link-for-pages */
+"use client";
 import Image from "next/image";
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
-import styles from './style.module.scss';
+import React, { useRef } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
+import styles from "./style.module.scss";
 import Magnetic from "../Magnetic";
 
-export default function Section(isActive) {
+export default function Index({ isActive, toggleMenu }) {
   const container = useRef(null);
   const isMobile = typeof window !== "undefined" ? window.innerWidth <= 768 : false;
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end end"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-
-
- 
-
   const x = !isMobile ? useTransform(scrollYProgress, [0, 1], [0, 100]) : 0;
-  const y = !isMobile ? useTransform(scrollYProgress, [0, 1], [-500, 0]) : 0;
+  const y = !isMobile ? useTransform(scrollYProgress, [0, 1], [-100, 0]) : 0;
   const rotate = !isMobile ? useTransform(scrollYProgress, [0, 1], [120, 90]) : 0;
+  const imageY = useTransform(scrollYProgress, [0, 1], ["10%", "10%"]);
 
   const handleContactButtonClick = () => {
     window.location.href = "mailto:lucas.sdunnek@gmail.com";
@@ -32,13 +28,26 @@ export default function Section(isActive) {
   return (
     <div
       ref={container}
-      className="relative flex items-center justify-center h-screen overflow-hidden"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      className="relative flex items-center justify-center h-screen overflow-hidden z-50"
+      style={{ clipPath: "polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%)" }}
+
+
     >
-      <div className={`${styles['text-container']} absolute inset-0 flex items-center justify-center`}>
-        <div className="relative flex flex-col items-center justify-center mt-16">
-       
-        <motion.div style={{ y }} ref={container} className={styles.contact}>
+<motion.div 
+  style={{ 
+    y, 
+    position: "fixed", 
+    top: 0, 
+    right: "30%",
+    
+    width: "40vw", 
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }} 
+  className={styles.contact}
+>
       <div className={styles.body}>
         <div className={styles.title}>
           <div className={styles.firstword}>
@@ -68,7 +77,7 @@ export default function Section(isActive) {
                 }}
               >
                 <div className={styles.el}>
-                  <p>Let's go</p>
+                  <PerspectiveText label="Let's Go" />
                 </div>
               </motion.div>
             </div>
@@ -89,40 +98,12 @@ export default function Section(isActive) {
           </motion.svg>
         </div>
 
-        <div className={styles.info}>
-          <div>
-            <span>
-              <p className={styles.nonClickableText}>2024 © Edition</p>
-            </span>
-            <span></span>
-          </div>
-          <div>
-            <span>
-              <Magnetic>
-                <a href="/impressum" className={styles.link}>
-                  <p>Impressum</p>
-                </a>
-              </Magnetic>
-            </span>
-            <Magnetic>
-              <a href="/Datenschutz" className={styles.link}>
-                <p>Datenschutz</p>
-              </a>
-            </Magnetic>
-          </div>
+        <div className="mb-36">
+          
         </div>
       </div>
     </motion.div>
-           
-           
-      
-
-          
-         
-        </div>
-      </div>
-
-      <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
+    <div className="fixed top-[-10vh] left-0 h-[100vh] w-full">
         <motion.div style={{ y: imageY }} className="relative w-full h-full">
           <Image
             src="https://res.cloudinary.com/dexbbnuzu/image/upload/dp4gbaauxhuzbqydgfgx"
@@ -133,9 +114,9 @@ export default function Section(isActive) {
         </motion.div>
       </div>
     </div>
+    
   );
 }
-
 
 function PerspectiveText({ label }) {
   return (

@@ -7,7 +7,9 @@
 }
 
 .timeLocationContainer {
-  position: absolute;
+  position: fixed;
+  z-index: 99;
+  mix-blend-mode: difference;
   top: 20px;
   left: 30px;
   display: flex;
@@ -17,19 +19,20 @@
 
 .locationText {
   font-size: 20px;
-  color: #151310;
-  font-family: "FeoniMedium", sans-serif;
+  font-family: "Feoni", sans-serif;
 }
 
 .name {
-  position: absolute;
+  mix-blend-mode: difference;
+  position: fixed;
+  z-index: 20;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1vw;
-  color: #151310;
-  font-family: "FeoniMedium", sans-serif;
+  font-family: "Feoni", sans-serif;
   white-space: nowrap;
+  z-index: 99;
 }
 
 .imageWrapper {
@@ -41,8 +44,8 @@
 
 .imageContainer {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 333px;
 }
 
 .imageContainer img {
@@ -51,9 +54,9 @@
 }
 
 .firstname {
-  color: #fd3d00;
+color: #151310;
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 15vw;
@@ -62,9 +65,9 @@
 }
 
 .lastname {
-  color: #fd3d00;
+    color: #151310;
   position: absolute;
-  bottom: 20px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 15vw;
@@ -91,7 +94,7 @@
   font-family: "Mulett", serif;
 }
 .letter7 {
-  font-family: "Sloppy", serif;
+  font-family: "Mulett", serif;
 }
 
 @media (max-width: 768px) {
@@ -105,8 +108,11 @@
   }
 
   .name {
+    position: relative;
     top: 8%;
+    justify-content: center;
     font-size: 3vw;
+    text-align: center;
   }
 
   .locationText {

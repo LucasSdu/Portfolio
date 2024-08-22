@@ -42,20 +42,13 @@ body {
 
 @font-face {
   font-family: "Mulett";
-  src: url("../../public/fonts/medio.otf");
+  src: url("../../public/fonts/NotoSerifDisplay-Regular.ttf");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Feoni";
-  src: url("../../public/fonts/Geist-Light.otf");
-  font-weight: light;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FeoniMedium";
   src: url("../../public/fonts/Geist-Bold.otf");
   font-weight: medium;
   font-style: normal;

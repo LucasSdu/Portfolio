@@ -6,17 +6,16 @@ import { useInView } from "react-intersection-observer";
 
 export default function Home() {
   const phrases1 = [
-    "They say you should always ",
-    "listen to your mom.",
-    "My mom says I'm a great designer,",
-    "so it must be true!",
+    "Hey, ich bin Lucas Sdunnek,",
+    "studiere Computervisualistik und Design in Lippstadt",
+    "und habe eine Leidenschaft für gutes Design,",
+    "Fotografie und Frontend-Entwicklung.",
   ];
 
   const phrases2 = [
-    "I have a dog named Pia",
-    "who thinks I'm the best human,",
-    "in the world mostly because,",
-    "I let her chew on my design sketches",
+     "Ich liebe es, innovative Lösungen zu finden",
+    "und ästhetische Designs zu entwickeln,",
+    "die Funktionalität mit visueller Klarheit verbinden.",
   ];
 
   const animation = {

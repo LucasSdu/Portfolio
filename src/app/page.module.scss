@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  font-family: "Inter", sans-serif;
+  font-family: "Feoni", sans-serif;
 }
 
 .body p {
@@ -19,6 +19,10 @@
 
 .body span {
   opacity: 0.2;
+}
+
+.header {
+  mix-blend-mode: difference;
 }
 
 .projects-container {
@@ -41,7 +45,7 @@
     text-transform: uppercase;
   }
 }
-// Beispiel für eine Media Query in SCSS
+
 @media only screen and (max-width: 768px) {
   .mobile-fixed-bottom {
     position: fixed;
@@ -50,7 +54,7 @@
     right: 0;
     width: 100%;
     margin: 0;
-    transform: none !important; /* Überschreibt transform wenn nötig */
+    transform: none !important;
   }
 }
 

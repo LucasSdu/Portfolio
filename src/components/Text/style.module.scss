@@ -3,17 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20vw; /* Abstand zwischen den Elementen */
-  padding: 0 10vw; /* Gleichmäßiger Abstand von den Seiten */
+  gap: 30vw; 
+  padding: 0 10vw; 
   margin-top: 300px;
-  margin-bottom: 300px;
+  margin-bottom: 40%;
 }
 
 .body {
   color: #151310;
   font-family: "Mulett", sans-serif;
-  font-size: 4vw; /* Basis Schriftgröße */
-  width: 100%; /* Volle Breite für gleichmäßigen Abstand */
+  font-size: 3vw; 
+  width: 100%; 
 }
 
 .lineMask {
@@ -28,17 +28,12 @@
 
 @media (max-width: 768px) {
   .container {
-    gap: 40vw;
-    padding: 0 5vw;
+    gap: 70vw;
     margin-top: 150px;
     margin-bottom: 150px;
   }
 
   .body {
-    font-size: 6vw;
-  }
-
-  .lineMask p {
-    font-size: 9vw;
+    font-size: 5.8vw;
   }
 }
