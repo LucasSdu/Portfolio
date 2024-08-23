@@ -30,8 +30,8 @@
 .project h2::after {
   content: "";
   width: 0%;
-  height: 1px;
-  background-color: #fd3d00;
+  height: 2px;
+  background-color: #fcdf3b;
   display: block;
   margin-top: 2px;
   position: relative;
@@ -112,7 +112,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #fd3d00;
+  background-color: #fcdf3b;
   color: white;
   position: fixed;
   z-index: 3;

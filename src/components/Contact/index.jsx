@@ -76,7 +76,7 @@ export default function Index({ isActive, toggleMenu }) {
                 }}
               >
                 <div className={styles.el}>
-                  <PerspectiveText label="Let's Go" />
+                  <PerspectiveText label="Here" />
                 </div>
               </motion.div>
             </div>

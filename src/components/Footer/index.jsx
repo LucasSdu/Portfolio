@@ -32,7 +32,7 @@ export default function Index({ isActive, toggleMenu }) {
               <defs>
                 <style>{`
                   .cls-1 {
-                    fill: #f9e821;
+                    fill: #fcdf3b;
                   }
                   .cls-2 {
                     fill: #0c0e06;
