@@ -46,13 +46,13 @@ export default function ContactPage() {
       height: 500,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/p7urbzfwmwvsi4bn9aui",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/syv1uidcyopa36flhxtm",
       align: "center",
       width: 300,
       height: 500,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/syv1uidcyopa36flhxtm",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/p7urbzfwmwvsi4bn9aui",
       align: "right",
       width: 300,
       height: 500,
