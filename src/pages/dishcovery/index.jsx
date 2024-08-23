@@ -76,12 +76,6 @@ export default function ContactPage() {
       height: 500,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/etn9ruwvfbm2qvbsqkbw",
-      align: "right",
-      width: 300,
-      height: 500,
-    },
-    {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/zedinhf1xzfb1tzgiqv9",
       align: "center",
       width: 300,
