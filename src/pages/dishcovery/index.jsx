@@ -64,13 +64,13 @@ export default function ContactPage() {
       height: 500,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/jgjdnkmjioyzxov2sagk",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/mwebmpocshxsvqjztkbo",
       align: "right",
       width: 300,
       height: 500,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/ckxjchmnmybh2em3t5xw",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/rj2rg5bzvldkxkvqxsve",
       align: "center",
       width: 300,
       height: 500,
