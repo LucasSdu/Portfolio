@@ -1,60 +1,156 @@
+.container {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  min-height: 100vh;
+}
 
-  
-  .container {
-    background-color: #f0f0f0; 
-    margin: 0; 
-    padding: 0; 
-    display: flex;
-    flex-direction: column; 
-    gap: 30px; 
-    padding-left: 20px; 
-    padding-right: 20px; 
+.timeLocationContainer {
+  position: fixed;
+  z-index: 99;
+  mix-blend-mode: difference;
+  top: 40px;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+
+
+.name {
+  mix-blend-mode: difference;
+  position: fixed;
+  z-index: 20;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-family: "Feoni", sans-serif;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+
+
+
+.firstname {
+  color: #151310;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15vw;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 100px;
   }
-  
-  .title {
-    margin-top: 100px;
-    text-align: center; 
-    font-size: 2rem; 
-    font-family: "Feoni", sans-serif;
-    color: #151310;
+
+  .letter1 {
+    font-family: "Mulett", serif;
   }
-  
-  .text {
- 
-    font-family: "Feoni", sans-serif;
-    color: #151310;
-  }  
-  .imageWrapper {
-    display: flex;
-    justify-content: center; 
-    padding: 20px; 
+  .letter2 {
+    font-family: "Sloppy", serif;
   }
-  
-  .imageWrapper.left {
-    justify-content: flex-start; 
+  .letter3 {
+    font-family: "Mulett", serif;
   }
-  
-  .imageWrapper.right {
-    justify-content: flex-end; 
+  .letter4 {
+    font-family: "Mulett", serif;
   }
-  
-  .imageWrapper.center {
-    justify-content: center; 
+  .letter5 {
+    font-family: "Mulett", serif;
   }
-  
-  .imageWrapper img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 5px;
+  .letter6 {
+    font-family: "Mulett", serif;
   }
-  
-  @media (max-width: 768px) {
+  .letter7 {
+    font-family: "Mulett", serif;
+  }
+  .letter8 {
+    font-family: "Mulett", serif;
+  }
+  .letter9 {
+    font-family: "Mulett", serif;
+  }
+  .letter10 {
+    font-family: "Mulett", serif;
+  }
+  .letter11 {
+    font-family: "Mulett", serif;
+  }
+  .letter12 {
+    font-family: "Mulett", serif;
+  }
+  .letter13 {
+    font-family: "Mulett", serif;
+  }
+  .letter14 {
+    font-family: "Mulett", serif;
+  }
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 500px;
+}
+
+.imageWrapper.left {
+  justify-content: flex-start;
+}
+
+.imageWrapper.right {
+  justify-content: flex-end;
+}
+
+.imageWrapper.center {
+  justify-content: center;
+}
+
+.imageWrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .space{
+    margin-bottom: 200px;
+  }
     .imageWrapper {
-        padding-bottom: 300px; 
-      }
-
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
+  
     .imageWrapper img {
-      max-width: 80%; 
-      height: auto; 
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .timeLocationContainer {
+      display: none;
+    }
+  
+    .name {
+      display: none;
+    }
+  
+    .firstname-container {
+      padding-top: 20px; /* Abstand nach oben */
+    }
+  
+    .firstname {
+      font-size: 15vw;
+      padding-top: 50px;
     }
   }

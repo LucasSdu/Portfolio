@@ -1,63 +1,102 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
 
 import Footer from '../../components/Footer';
 
 export default function ContactPage() {
+
+  const TimeInGermany = () => {
+    const [time, setTime] = useState("");
+  
+    useEffect(() => {
+      const updateTime = () => {
+        const options = {
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZone: "Europe/Berlin",
+          hour12: true,
+        };
+        const formatter = new Intl.DateTimeFormat("en-US", options);
+        const formattedTime = formatter.format(new Date());
+        setTime(formattedTime);
+      };
+  
+      updateTime();
+      const intervalId = setInterval(updateTime, 1000);
+  
+      return () => clearInterval(intervalId);
+    }, []);
+  
+    return <span className={styles.time}>{time}</span>;
+  };
+
+
   const images = [
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/noofgpsvnrotb519df6o",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/noofgpsvnrotb519df6o",
       align: "left",
-      width: 300,
-      height: 666,
+      width: 800,
+      height: 1200,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/lus6ceikl2gibkwvcney",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/lus6ceikl2gibkwvcney",
       align: "center",
-      width: 300,
-      height: 666,
+      width: 800,
+      height: 1200,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/pglhxwoe08xtrr8ltc1h",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/pglhxwoe08xtrr8ltc1h",
       align: "center",
-      width: 666,
-      height: 300,
+      width: 800,
+      height: 1200,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/dpskven4ahlvpzoieubx",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/dpskven4ahlvpzoieubx",
       align: "right",
-      width: 300,
-      height: 666,
+      width: 800,
+      height: 1200,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/fycxworvyhxqk0aa00wo",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/fycxworvyhxqk0aa00wo",
       align: "left",
-      width: 300,
-      height: 666,
+      width: 800,
+      height: 1200,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/x0pqdp7vrgbwdtpbuxi5",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/x0pqdp7vrgbwdtpbuxi5",
       align: "right",
-      width: 666,
-      height: 666,
+      width: 800,
+      height: 1200,
     },
     {
-      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/rtmiif8iq15pzqnsmc8p",
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/rtmiif8iq15pzqnsmc8p",
       align: "center",
-      width: 666,
-      height: 300,
+      width: 800,
+      height: 1200,
     },
   ];
 
   return (
     <div className={styles.body}>
 <div className={styles.container}>
-
-      <h1 className={styles.title}>Illustrations</h1>
-      <p className={styles.text}>
-        Hier sind ein paar meiner Illustrationen
-      </p>
+<div className={styles.name}>
+        <span>DESIGNER & DEVELOPER</span>
+      </div>
+      <div className={styles.timeLocationContainer}>
+        <span className={styles.locationText}>
+          From Germany (<TimeInGermany />){" "}
+        </span>
+      </div>
+     
+      <div className={styles.firstname}>
+        {"Illustrationen".split("").map((letter, index) => (
+          <span key={index} className={styles[`letter${index + 1}`]}>
+            {letter}
+          </span>
+        ))}
+      </div>
+      <div className={styles.space}></div>
       {images.map((image, index) => (
         <div
           key={index}

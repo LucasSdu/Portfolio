@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/DSCF4018_hzd1om.jpg",
+    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/v1723757987/DSCF4018_hzd1om.jpg",
   },
 ];
 

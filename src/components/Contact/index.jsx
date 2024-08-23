@@ -5,7 +5,6 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import styles from "./style.module.scss";
-import Magnetic from "../Magnetic";
 
 export default function Index({ isActive, toggleMenu }) {
   const container = useRef(null);
@@ -106,7 +105,7 @@ export default function Index({ isActive, toggleMenu }) {
     <div className="fixed top-[-10vh] left-0 h-[100vh] w-full">
         <motion.div style={{ y: imageY }} className="relative w-full h-full">
           <Image
-            src="https://res.cloudinary.com/dexbbnuzu/image/upload/dp4gbaauxhuzbqydgfgx"
+            src="https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/dp4gbaauxhuzbqydgfgx"
             fill
             alt="Background Image"
             style={{ objectFit: "cover" }}

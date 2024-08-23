@@ -19,32 +19,32 @@ export default function Index() {
 
     const pictures = [
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/Dishcovery_exkyhm.jpg',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/Dishcovery_exkyhm.jpg',
             scale: scale4,
            
         },
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/Photography_v5zmfp.jpg',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/Photography_v5zmfp.jpg',
             scale: scale5,
         },
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/rojmnanadmvaatmrnipc.jpg',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/rojmnanadmvaatmrnipc.jpg',
             scale: scale6,
         },
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/ebtrdjgtyvkw2gxjk0h0.jpg',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/ebtrdjgtyvkw2gxjk0h0.jpg',
             scale: scale5,
         },
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/e4svqxdttyhfq85irfig',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/e4svqxdttyhfq85irfig',
             scale: scale6,
         },
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/i5zlezcodbji4pviarej.jpg',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/i5zlezcodbji4pviarej.jpg',
             scale: scale8,
         },
         {
-            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/v1723757987/rjzzi0au5vehknfpdly4.jpg',
+            src: 'https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/rjzzi0au5vehknfpdly4.jpg',
             scale: scale9,
         }
     ];
