@@ -13,12 +13,12 @@ export default function ContactPage() {
 Lucas Sdunnek<br />
 
 Office<br />
-Venusstr. 13<br />
+Street<br />
 59067 Hamm<br />
 Germany<br />
 E-Mail: lucas.sdunnek@gmail.com<br />
 
-Telefon: +49 / 01512 6345383<br />
+Telefon: +49 / 00000000<br />
 Inhaltlich Verantwortlicher (gemäß § 55 Abs. 2 RStV):
 Lucas Sdunnek (Anschrift s. oben)<br />
 Copyright<br />

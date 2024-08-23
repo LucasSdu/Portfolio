@@ -8,16 +8,14 @@ import Projects from "../components/Projects";
 import gsap from "gsap";
 import AboutMe from "../components/Aboutme";
 import Text from "../components/Text";
-import { AnimatePresence } from "framer-motion";
-import Preloader from "../components/Preloader";
 import ZoomProjects from "../components/ZoomProjects";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const [isLoading] = useState(true);
- 
-  const container = useRef(null);
+
+
+
   const refs = useRef([]);
   const textContainer = useRef(null);
 
@@ -46,41 +44,34 @@ export default function Home() {
     });
   };
 
-
   return (
     <div
       className={`relative min-h-screen flex flex-col cursor-default bg-white100 ${styles["full-height-container"]}`}
     >
-      <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
-      </AnimatePresence>
+  
 
       <main className={styles.main}>
-        <Header/>
+        <Header />
+        <AboutMe />
         <section id="aboutme">
-          <AboutMe />
+         
         </section>
         <Text className="z-50" />
         <div className="lg:mb-96 md:mb-1"></div>
-     
-        
-        <section id="skills">
-    
+
+        <section id="projects">
           <ZoomProjects />
-        </section>
-        <div className="lg:mb-96 md:mb-1"></div>
-      
-        <section id="myprojects">
+          <div className="lg:mb-96 md:mb-1"></div>
+
           <Projects />
         </section>
         <div className="lg:mb-96 md:mb-1"></div>
 
         <section id="contact" className="mt-96">
-        <Contact />
-      </section>
+          <Contact />
+        </section>
       </main>
       <div className="lg:mb-96 md:mb-1"></div>
-     
 
       <section id="contact">
         <Footer />
