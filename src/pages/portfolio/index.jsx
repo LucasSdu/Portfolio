@@ -1,7 +1,7 @@
 import React from 'react';
 import Scene from './Scence';
 import Text from './Text';
-import useWindow from './useWindows';
+import useWindow from './Model';
 
 export default function Home() {
   const { dimension } = useWindow();

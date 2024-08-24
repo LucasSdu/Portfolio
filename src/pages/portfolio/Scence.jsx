@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import React, { useEffect, useRef } from 'react'
-import useWindow from './useWindows'
+import useWindow from './Model'
 
 export default function Scene() {
   const { dimension } = useWindow();
