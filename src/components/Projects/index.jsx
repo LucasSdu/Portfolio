@@ -38,7 +38,7 @@ const projects = [
     title: "Portfolio",
     src: "Portfolio.png",
     color: "#ECEBEB",
-    link: "/photography",
+    link: "",
     description: "Design & Development",
   },
 ];
