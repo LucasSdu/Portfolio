@@ -6,7 +6,7 @@ export default function Text() {
       <p>Hier gibt es nichts zu sehen,</p>
       <p className="self-end">gehen Sie einfach zurück</p>
       <p>und genießen mein Portfolio.</p>
-      <p className="self-end">Cheers :-)</p>
+      <p className="self-end">Cheers</p>
     </div>
   )
 }
