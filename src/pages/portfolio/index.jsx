@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="flex w-full h-screen items-center justify-center bg-white100">
       <Text />
-      {!isMobile && <Scene />} {/* Nur anzeigen, wenn es nicht mobil ist */}
+      {!isMobile && <Scene />}
     </main>
   );
 }
