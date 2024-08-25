@@ -1,11 +1,9 @@
 import React, { useRef } from 'react';
-import { fragment, vertex } from './shade';
 import { useFrame, useThree } from '@react-three/fiber';
 import { useTexture, useAspect } from '@react-three/drei';
 import * as THREE from 'three';
 
 export default function Model() {
-
     const image = useRef();
     const texture = useTexture("/images/Portfolio.png");
     const { width, height } = texture.image;
@@ -44,10 +42,37 @@ export default function Model() {
             <planeGeometry args={[1, 1, 15, 15]} />
             <shaderMaterial
                 wireframe={false}
-                fragmentShader={fragment}
-                vertexShader={vertex}
+                fragmentShader={fragmentShader}
+                vertexShader={vertexShader}
                 uniforms={uniforms.current}
             />
         </mesh>
     );
 }
+
+const vertexShader = `
+varying vec2 vUv;
+uniform float uTime;
+uniform float uAmplitude;
+uniform float uWaveLength;
+void main() {
+    vUv = uv;
+    vec3 newPosition = position;
+
+    float wave = uAmplitude * sin(position.x * uWaveLength + uTime);
+    newPosition.z = position.z + wave; 
+
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
+}
+`
+
+const fragmentShader = `
+uniform sampler2D uTexture;
+uniform vec2 vUvScale;
+varying vec2 vUv;
+void main() {
+    vec2 uv = (vUv - 0.5) * vUvScale + 0.5;
+    vec4 color = texture2D(uTexture, uv);
+    gl_FragColor = color;  
+}
+`
