@@ -1,11 +1,11 @@
-import { Canvas } from '@react-three/fiber'
-import React from 'react'
-import Model from './model'
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import Model from './Model';
 
-export default function Scene({scrollProgress}) {
+export default function Scene() {
     return (
         <Canvas>
-            <Model scrollProgress={scrollProgress}/>
+            <Model />
         </Canvas>
-    )
+    );
 }

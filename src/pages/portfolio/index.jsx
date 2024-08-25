@@ -1,17 +1,8 @@
-
-
-
-
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
-import dynamic from "next/dynamic";
+import Image from "next/image";
 
 import Footer from '../../components/Footer';
-
-
-const Scene = dynamic(() => import('./components/scence'), {
-    ssr: false,
-  });
 
 export default function ContactPage() {
 
@@ -41,6 +32,15 @@ export default function ContactPage() {
   };
 
 
+  const images = [
+    {
+      url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/jgwpztzltbfp31rfgvys",
+      align: "left",
+      width: 800,
+      height: 1200,
+    },
+  ];
+
   return (
     <div className={styles.body}>
 <div className={styles.container}>
@@ -52,6 +52,7 @@ export default function ContactPage() {
           From Germany (<TimeInGermany />){" "}
         </span>
       </div>
+     
       <div className={styles.firstname}>
         {"Sie sind herzlich eingeladen, mein Portfolio zu erkunden. Cheers!".split("").map((letter, index) => (
           <span key={index} className={styles[`letter${index + 1}`]}>
@@ -59,10 +60,21 @@ export default function ContactPage() {
           </span>
         ))}
       </div>
-      <div className="h-screen mt-72">
-        <Scene />
-      </div>
-
+      <div className={styles.space}></div>
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`${styles.imageWrapper} ${styles[image.align]}`}
+        >
+          <Image
+            src={image.url}
+            alt={`Bild ${index + 1}`}
+            width={image.width}
+            height={image.height}
+          />
+        </div>
+      ))}
+     <div className="lg:mb-96 md:mb-1"></div>
      
     </div>
     <div>
