@@ -13,9 +13,9 @@ export default function Home() {
   ];
 
   const phrases2 = [
-     "Ich liebe es, innovative Lösungen zu finden",
-    "und ästhetische Designs zu entwickeln,",
-    "die Funktionalität mit visueller Klarheit verbinden.",
+     "Ich liebe es, innovative Lösungen zu finden,",
+    "ästhetische Designs zu entwickeln und",
+    "die Funktionalität mit visueller Klarheit zu verbinden.",
   ];
 
   const animation = {
