@@ -39,10 +39,16 @@ body {
   font-weight: light;
   font-style: normal;
 }
+@font-face {
+  font-family: "Brush";
+  src: url("../../public/fonts/BlowBrush.ttf");
+  font-weight: light;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Mulett";
-  src: url("../../public/fonts/NotoSerifDisplay-Regular.ttf");
+  src: url("../../public/fonts/Geist-Bold.otf");
   font-weight: light;
   font-style: normal;
 }
@@ -50,6 +56,13 @@ body {
 @font-face {
   font-family: "Feoni";
   src: url("../../public/fonts/Geist-Bold.otf");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FeoniMedium";
+  src: url("../../public/fonts/Geist-Medium.ttf");
   font-weight: medium;
   font-style: normal;
 }

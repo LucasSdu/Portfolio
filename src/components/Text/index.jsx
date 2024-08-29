@@ -1,97 +1,44 @@
-"use client";
-import React from "react";
-import styles from "./style.module.scss";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef } from 'react';
+import styles from './style.module.scss';
 
-export default function Home() {
-  const phrases1 = [
-    "Hey, ich bin Lucas Sdunnek,",
-    "studiere Computervisualistik und Design in Lippstadt",
-    "und habe eine Leidenschaft für gutes Design,",
-    "Fotografie und Frontend-Entwicklung.",
-  ];
+export default function Paragraph({ paragraph }) {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start 0.5", "start 0.2"]
+  });
 
-  const phrases2 = [
-     "Ich liebe es, innovative Lösungen zu finden,",
-    "ästhetische Designs zu entwickeln und",
-    "die Funktionalität mit visueller Klarheit zu verbinden.",
-  ];
-
-  const animation = {
-    initial: (i) => ({
-      y: "100%",
-      transition: {
-        duration: 0.75,
-        ease: [0.33, 1, 0.68, 1],
-        delay: 0.075 * i,
-      },
-    }), // Anfangsposition (außerhalb des sichtbaren Bereichs)
-    enter: (i) => ({
-      y: "0%",
-      transition: {
-        duration: 0.75,
-        ease: [0.33, 1, 0.68, 1],
-        delay: 0.075 * i,
-      },
-    }), // Eintritt-Animation
-  };
-
-  const useAnimationOnView = (threshold = 0.75) => {
-    return useInView({
-      threshold,
-      triggerOnce: false,
-    });
-  };
+  const words = paragraph.split(" ");
 
   return (
-    <div className={styles.container}>
-      <AnimatedText
-        phrases={phrases1}
-        useAnimationOnView={useAnimationOnView}
-      />
-      <AnimatedText
-        phrases={phrases2}
-        useAnimationOnView={useAnimationOnView}
-      />
+    <div className={styles.wrapper}>
+      <div className={styles.fixedContent}>
+        <h2>Über mich</h2>
+      </div>
+      <div className={styles.scrollableContent}>
+        <p ref={container} className={styles.paragraph}>
+          {words.map((word, i) => {
+            const start = i / words.length;
+            const end = start + (1 / words.length);
+            return (
+              <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                {word}
+              </Word>
+            );
+          })}
+        </p>
+      </div>
     </div>
   );
 }
 
-function AnimatedText({ phrases, useAnimationOnView }) {
-  const { ref, inView } = useAnimationOnView();
-
+const Word = ({ children, progress, range }) => {
+  const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <div ref={ref} className={styles.body}>
-      {phrases.map((phrase, index) => (
-        <div key={index} className={styles.lineMask}>
-          <motion.p
-            custom={index}
-            variants={{
-              initial: {
-                y: "100%",
-                transition: {
-                  duration: 0.75,
-                  ease: [0.33, 1, 0.68, 1],
-                  delay: 0.075 * index,
-                },
-              },
-              enter: {
-                y: "0%",
-                transition: {
-                  duration: 0.75,
-                  ease: [0.33, 1, 0.68, 1],
-                  delay: 0.075 * index,
-                },
-              },
-            }}
-            initial="initial"
-            animate={inView ? "enter" : "initial"}
-          >
-            {phrase}
-          </motion.p>
-        </div>
-      ))}
-    </div>
+    <span className={styles.word}>
+      <span className={styles.shadow}>{children}</span>
+      <motion.span style={{ opacity: opacity }}>{children}</motion.span>
+    </span>
   );
-}
+};

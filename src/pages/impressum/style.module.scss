@@ -10,6 +10,33 @@
     padding-left: 20px; 
     padding-right: 20px;
   }
+  .locationText {
+    position: fixed;
+    z-index: 99;
+    mix-blend-mode: difference;
+    top: 20px;
+    left: 35px;
+    font-size: 20px;
+    font-family: "Feoni", sans-serif;
+    text-align: left;
+  }
+  .locationText h1 {
+    opacity: 70%;
+  }
+  .name {
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 20px;
+    right: 35px;
+    font-size: 20px;
+    font-family: "Feoni", sans-serif;
+    z-index: 99;
+    text-align: left;
+  }
+  
+  .name h1 {
+    opacity: 70%;
+  }
   
   .title {
     margin-top: 100px;

@@ -1,12 +1,75 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
-import Image from "next/image";
 import Footer from '../../components/Footer';
+import Lenis from "@studio-freight/lenis";
+
+
 
 export default function ContactPage() {
+
+  const TimeInGermany = () => {
+    const [time, setTime] = useState("");
+
+    useEffect(() => {
+      const lenis = new Lenis();
+  
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+  
+      requestAnimationFrame(raf);
+    }, []);
+  
+    useEffect(() => {
+      const updateTime = () => {
+        const options = {
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZone: "Europe/Berlin",
+          hour12: true,
+        };
+        const formatter = new Intl.DateTimeFormat("en-US", options);
+        const formattedTime = formatter.format(new Date());
+        setTime(formattedTime);
+      };
+  
+      updateTime();
+      const intervalId = setInterval(updateTime, 1000);
+  
+      return () => clearInterval(intervalId);
+    }, []);
+  
+    return <span className={styles.time}>{time}</span>;
+  };
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <div className={styles.body}>
       <div className={styles.container}>
+      <div className={styles.name}>
+          <button className={styles.name} onClick={() => window.history.back()}>
+            <h1>Lucas Sdunnek:</h1>
+            <div className={styles.roles}>
+              <span>Designer & Developer</span>
+            </div>
+          </button>
+        </div>
+
+        <div className={styles.locationText}>
+          <h1>Location:</h1>
+          <div className={styles.time}>
+            Germany, (<TimeInGermany />){" "}
+          </div>
+        </div>
         <h1 className={styles.title}>Impressum</h1>
         <p className={styles.text}>
         Kontakt<br />
@@ -31,7 +94,7 @@ Verwendete Warenzeichen, Fotografien und Logos sind Eigentum der jeweiligen Inha
         <div className="mb-96"></div>
         <div className="mb-96"></div>
       </div>
-
+      <div style={{ backgroundColor: "#b0bdd0", height: "50vh" }}></div>
       <div>
         <Footer />
       </div>

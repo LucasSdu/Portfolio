@@ -34,13 +34,6 @@ const projects = [
     color: "#ECEBEB",
     link: "/photography",
   },
-  {
-    title: "Portfolio",
-    src: "Portfolio.png",
-    color: "#ECEBEB",
-    link: "/portfolio",
-    description: "Design & Development",
-  },
 ];
 
 const scaleAnimation = {
@@ -65,6 +58,8 @@ export default function Home() {
   const modalContainer = useRef(null);
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
+
+
 
   let xMoveContainer = useRef(null);
   let yMoveContainer = useRef(null);
@@ -134,7 +129,10 @@ export default function Home() {
             onMouseLeave={(e) => {
               manageModal(false, index, e.clientX, e.clientY);
             }}
-            onClick={() => (window.location.href = project.link)}
+            onClick={() =>  {
+                window.location.href = project.link; 
+              }
+            }
           >
             <div className={styles.projectContent}>
               <h2>{project.title}</h2>
@@ -143,6 +141,9 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+
+     
 
       <motion.div
         ref={modalContainer}

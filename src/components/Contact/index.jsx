@@ -50,14 +50,14 @@ export default function Index({ isActive, toggleMenu }) {
       <div className={styles.body}>
         <div className={styles.title}>
           <div className={styles.firstword}>
-            {"Get in".split("").map((letter, index) => (
+            {"Komm in".split("").map((letter, index) => (
               <span key={index} className={styles[`letter${index + 1}`]}>
                 {letter}
               </span>
             ))}
           </div>
           <div className={styles.lastword}>
-            {"Contact".split("").map((letter, index) => (
+            {"Kontakt".split("").map((letter, index) => (
               <span key={index} className={styles[`letter${index + 1}`]}>
                 {letter}
               </span>
@@ -76,7 +76,7 @@ export default function Index({ isActive, toggleMenu }) {
                 }}
               >
                 <div className={styles.el}>
-                  <PerspectiveText label="Here" />
+                  <PerspectiveText label="Hier" />
                 </div>
               </motion.div>
             </div>

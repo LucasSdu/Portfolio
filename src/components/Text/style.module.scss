@@ -1,39 +1,89 @@
-/* Base styles */
-.container {
+/* style.module.scss */
+
+.wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30vw; 
-  padding: 0 10vw; 
-  margin-top: 300px;
-  margin-bottom: 40%;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-.body {
+.fixedContent {
   color: #151310;
-  font-family: "Mulett", sans-serif;
-  font-size: 3vw; 
-  width: 100%; 
+  position: sticky;
+  top:50%;
+  width: 30%; 
+  padding: 20px;
+  font-family: "Feoni", serif;
+  font-size: 65px;
 }
 
-.lineMask {
-  overflow: hidden;
+.scrollableContent {
+  flex: 1; 
+  padding: 20px;
+}
+
+.paragraph {
   display: flex;
+  flex-wrap: wrap;
+  font-size: 60px;
+  line-height: 1;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: "FeoniMedium", serif;
+  color: #151310;
 }
 
-.lineMask p {
-  margin: 0;
-  font-weight: 700;
+.word {
+  position: relative;
+  margin-right: 20px;
+  margin-top: 15px;
 }
+
+.shadow {
+  position: absolute;
+  opacity: 10%;
+  color: rgba(0, 0, 0, 0.2); /* Schattenfarbe */
+}
+
 
 @media (max-width: 768px) {
-  .container {
-    gap: 70vw;
-    margin-top: 150px;
-    margin-bottom: 150px;
+  .wrapper {
+    display: block; /* Ändert das Layout von flex zu block */
+    padding: 0; /* Entfernt den Abstand zum Rand */
+    margin: 0; /* Entfernt eventuelle Standard-Margins */
   }
-
-  .body {
-    font-size: 5.8vw;
+  
+  .fixedContent {
+    position: relative;
+    color: #151310;
+    width: 100%; /* Macht den Inhalt vollbreit */
+    padding: 0; /* Entfernt Padding, um den Rand voll auszunutzen */
+    font-family: "FeoniMedium", serif;
+    font-size: 5vw; /* Erhöht die Schriftgröße */
+    opacity: 30%;
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+    margin: 0; /* Entfernt eventuelle Margins */
+  }
+  
+  .scrollableContent {
+    width: 100%; /* Macht den Inhalt vollbreit */
+    padding: 0; /* Entfernt Padding */
+    margin: 0; /* Entfernt eventuelle Margins */
+  }
+  
+  .paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 7.25vw; /* Erhöht die Schriftgröße */
+    line-height: 1;
+    padding-left: 0; /* Entfernt Padding */
+    padding-right: 0; /* Entfernt Padding */
+    font-family: "FeoniMedium", serif;
+    color: #151310;
+  }
+  
+  .word {
+    position: relative;
+    margin-right: 5px; /* Entfernt Margin-Rechts */
+    margin-top: 15px; /* Entfernt Margin-Oben */
   }
 }

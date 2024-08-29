@@ -3,9 +3,6 @@
 
   flex-direction: column;
 
-
-
- 
   z-index: 10;
 
   .body {
@@ -32,7 +29,7 @@
       }
 
       .letter1 {
-        font-family: "Mulett", sans-serif;
+        font-family: "Feoni", sans-serif;
       }
       .letter2 {
         font-family: "Sloppy", serif;
@@ -52,7 +49,6 @@
       .letter7 {
         font-family: "Mulett", serif;
       }
-      
     }
 
     .buttonContainer {
@@ -73,7 +69,7 @@
       cursor: pointer;
       overflow: hidden;
       font-family: "Feoni", sans-serif;
-      background-color: #fcdf3b;
+      background-color: #b0bdd0;
       color: #151310;
       border-radius: 50%;
       display: flex;
@@ -115,7 +111,7 @@
 
     svg {
       position: absolute;
-      top: 50%;
+      top: 60%;
       left: 90%;
     }
   }
@@ -127,8 +123,6 @@
     margin-top: 100px;
     color: #151310;
   }
-
-  
 
   .perspectiveText {
     display: flex;
@@ -170,24 +164,19 @@
         .firstword {
           color: #151310;
           font-size: 50px;
-          
         }
 
         .lastword {
           margin-top: 50px;
           color: #151310;
-          font-size: 50px; 
+          font-size: 50px;
         }
-
-      
       }
 
       .buttonContainer {
         position: absolute;
-        left: 50%; 
+        left: 50%;
         top: 80%;
-       
-
       }
 
       .button {
@@ -206,7 +195,6 @@
         right: 20px;
         left: auto;
         rotate: 80deg;
- 
       }
     }
   }

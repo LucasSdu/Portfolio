@@ -1,135 +1,228 @@
 .body {
   position: relative;
-
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-.timeLocationContainer {
+.locationText {
   position: fixed;
   z-index: 99;
   mix-blend-mode: difference;
-  top: 40px;
+  top: 20px;
   left: 35px;
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-}
-
-.locationText {
   font-size: 20px;
   font-family: "Feoni", sans-serif;
+  text-align: left;
 }
-
+.locationText h1 {
+  opacity: 70%;
+}
 .name {
   mix-blend-mode: difference;
   position: fixed;
-  z-index: 20;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 20px;
+  right: 35px;
   font-size: 20px;
   font-family: "Feoni", sans-serif;
-  white-space: nowrap;
   z-index: 99;
+  text-align: left;
 }
 
-.imageWrapper {
+.name h1 {
+  opacity: 70%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.info span {
+  font-family: "Brush", sans-serif;
+  color: #151310;
+  font-size: 8vw;
+  margin: -50px;
+}
 
+.heartContainer {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
-.imageContainer {
+.heart {
+  width: 30px;
+  height: auto;
+}
+
+.about {
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translateX(-50%);
+  font-size: 5vw;
+  font-family: "Brush", sans-serif;
+  gap: 10px;
+  z-index: 99;
+}
+
+.container {
   position: relative;
-  width: 250px;
-  height: 333px;
+  top: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-
-.imageContainer img {
-  border-radius: 5px;
-  object-fit: cover;
-  z-index: 10;
-}
-
-.firstname {
-color: #151310;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 15vw;
+.bezierkurve {
   text-align: center;
-  width: 100%;
 }
 
+.birth {
+  text-align: center;
+  font-family: "Brush", sans-serif;
+  font-size: 20px;
+  color: #151310;
+}
+.year {
+  text-align: center;
+  font-family: "Brush", sans-serif;
+  font-size: 20px;
+  color: #151310;
+}
+
+.Im {
+  position: absolute;
+  bottom: 5.6%;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  font-family: "Feoni", sans-serif;
+  font-size: 20px;
+  color: #151310;
+}
+.end {
+  position: absolute;
+  bottom: 5.6%;
+  left: 820px;
+  display: flex;
+  align-items: center;
+  font-family: "Feoni", sans-serif;
+  font-size: 20px;
+  color: #151310;
+}
+
+
+.nameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  gap: 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 26%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: #151310;
+}
+
+.firstname,
 .lastname {
-    color: #151310;
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 15vw;
-  text-align: center;
-  width: 100%;
+  font-size: 5vw;
+  line-height: 1;
+}
+
+.svgContainer {
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+}
+.svg {
+  width: 30px;
+  height: auto;
 }
 
 .letter1 {
-  font-family: "Mulett", serif;
+  font-family: "Feoni", serif;
 }
 .letter2 {
   font-family: "Sloppy", serif;
 }
 .letter3 {
-  font-family: "Mulett", serif;
+  font-family: "Feoni", serif;
 }
 .letter4 {
-  font-family: "Mulett", serif;
+  font-family: "Feoni", serif;
 }
 .letter5 {
-  font-family: "Mulett", serif;
+  font-family: "Feoni", serif;
 }
 .letter6 {
-  font-family: "Mulett", serif;
+  font-family: "Feoni", serif;
 }
 .letter7 {
-  font-family: "Mulett", serif;
+  font-family: "Feoni", serif;
 }
 
 @media (max-width: 768px) {
-  .timeLocationContainer {
-    position: relative;
-    top: 14%;
-    left: auto;
-    justify-content: center;
-    font-size: 3vw;
-    text-align: center;
-    z-index: 0;
+  .locationText {
+    left: 5px;
+    font-size: 15px;
   }
 
   .name {
-    position: relative;
-    top: 13%;
+    right: 5px;
+    font-size: 15px;
+  }
+
+  .info span {
+
+    font-size: 12vw;
+    margin: -10px;
+  }
+  
+  .container {
+ 
+    top: 75%;
+ 
+  }
+  
+  .Im {
+    display: none;
+  }
+  .end {
+    display: none;
+  }
+
+
+  .nameContainer {
+    display: flex;
     justify-content: center;
-    font-size: 3vw;
+    align-items: last baseline;
+    gap: 5px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     text-align: center;
-    z-index: 0;
+    color: #151310;
   }
 
-  .locationText {
-    font-size: 3vw;
-  }
-
-  .firstname {
-    top: 18%;
-    font-size: 20vw;
-  }
-
+  .firstname,
   .lastname {
-    bottom: 16%;
-    font-size: 20vw;
+    font-size: 12vw;
+    line-height: 1;
+  }
+
+  .svg {
+    width: 20px;
+    height: 20px;
   }
 }

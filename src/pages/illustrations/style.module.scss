@@ -11,31 +11,32 @@
   min-height: 100vh;
 }
 
-.timeLocationContainer {
-  font-family: "Feoni", sans-serif;
+.locationText {
   position: fixed;
   z-index: 99;
   mix-blend-mode: difference;
-  top: 40px;
+  top: 20px;
   left: 35px;
-  display: flex;
-  align-items: center;
   font-size: 20px;
+  font-family: "Feoni", sans-serif;
+  text-align: left;
 }
-
-
-
+.locationText h1 {
+  opacity: 70%;
+}
 .name {
   mix-blend-mode: difference;
   position: fixed;
-  z-index: 20;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 20px;
+  right: 35px;
   font-size: 20px;
   font-family: "Feoni", sans-serif;
-  white-space: nowrap;
   z-index: 99;
+  text-align: left;
+}
+
+.name h1 {
+  opacity: 70%;
 }
 
 
@@ -47,7 +48,7 @@
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 15vw;
+    font-size: 14vw;
     text-align: center;
     width: 100%;
     margin-bottom: 100px;
