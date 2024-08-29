@@ -130,24 +130,9 @@
         }
 
         p {
-            &::after {
-                content: "";
-                width: 0%;
-                height: 1px;
-                background-color: #fcdf3b;
-                display: block;
-                margin-top: 2px;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-                transition: width 0.2s linear;
-            }
+            
 
-            &:hover {
-                &::after {
-                    width: 100%;
-                }
-            }
+          
         }
 
         span {
