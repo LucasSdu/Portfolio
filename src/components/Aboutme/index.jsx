@@ -1,22 +1,11 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
-import Image from "next/image";
+import Magnetic from "../Magnetic";
 import { motion, useTransform, useScroll } from "framer-motion";
 import Bezierkurve from "../Bezierkurve";
 
-const projects = [
-  {
-    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/v1723757987/Photography_v5zmfp.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/v1723757987/ebtrdjgtyvkw2gxjk0h0.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/v1723757987/i5zlezcodbji4pviarej.jpg",
-  },
-  // Weitere Bilder hier hinzufügen...
-];
 
 const TimeInGermany = () => {
   const [time, setTime] = useState("");
@@ -69,15 +58,7 @@ export default function Index() {
     };
   }, []);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setSelectedProject((prevIndex) =>
-        prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <div ref={container} className={styles.body}>
@@ -157,7 +138,7 @@ export default function Index() {
             viewBox="0 0 201.8 201.8"
             className={styles.svg}
             style={{ rotate: rotation }}
-            transition={{ duration: 0.2 }} // Optional: for a smooth rotation animation
+            transition={{ duration: 0.2 }} 
           >
             <defs>
               <style>{`
@@ -194,6 +175,27 @@ export default function Index() {
           ))}
         </div>
       </div>
+      <div className={styles.infofooter}>
+          <div>
+            <span>
+              <p className={styles.nonClickableText}>2024 © Edition</p>
+            </span>
+          </div>
+          <div>
+            <span>
+              <Magnetic>
+                <a href="/impressum" className={styles.link}>
+                  <p>Impressum</p>
+                </a>
+              </Magnetic>
+            </span>
+            <Magnetic>
+              <a href="/Datenschutz" className={styles.link}>
+                <p>Datenschutz</p>
+              </a>
+            </Magnetic>
+          </div>
+        </div>
     </div>
   );
 }

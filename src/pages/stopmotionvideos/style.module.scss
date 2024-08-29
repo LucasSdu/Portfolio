@@ -147,24 +147,26 @@
       width: 100%; 
     }
     .videoGrid {
-      padding-top: 500px;
+      padding-top: 350px;
     }
     .videoWrapper {
      
-      padding-top: 50px;
+      padding-top: 0px;
     }
-    .timeLocationContainer {
-      display: none;
+    .locationText {
+      left: 5px;
+      font-size: 15px;
     }
   
     .name {
-      display: none;
+      right: 5px;
+      font-size: 15px;
     }
 
   
     .firstname {
-      font-size: 20vw;
-      padding-bottom: 500px;
+      font-size: 15vw;
+      padding-bottom: 0px;
     }
   }
   

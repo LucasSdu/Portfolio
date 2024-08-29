@@ -51,3 +51,15 @@
     font-family: "Feoni", sans-serif;
     color: #151310;
   }
+
+  @media (max-width: 768px) {
+    .locationText {
+      left: 5px;
+      font-size: 15px;
+    }
+  
+    .name {
+      right: 5px;
+      font-size: 15px;
+    }
+  }

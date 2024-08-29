@@ -118,6 +118,7 @@
         align-items: center;
 
         .nonClickableText {
+          font-family: "Brush", sans-serif;
             cursor: default;
             font-weight: 300;
         }
@@ -127,12 +128,6 @@
             margin: 0px;
             padding: 2.5px;
             cursor: pointer;
-        }
-
-        p {
-            
-
-          
         }
 
         span {

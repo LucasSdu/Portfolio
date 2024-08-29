@@ -139,20 +139,21 @@
       height: auto;
     }
   
-    .timeLocationContainer {
-      display: none;
+    .locationText {
+      left: 5px;
+      font-size: 15px;
     }
   
     .name {
-      display: none;
+      right: 5px;
+      font-size: 15px;
     }
-  
     .firstname-container {
       padding-top: 20px; /* Abstand nach oben */
     }
   
     .firstname {
-      font-size: 15vw;
-      padding-top: 50px;
+      font-size: 14vw;
+      padding-top: 80px;
     }
   }

@@ -6,7 +6,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import styles from "../style.module.scss";
 import Magnetic from "../../Magnetic";
 
-export default function Index({ isActive, toggleMenu }) {
+export default function Index({}) {
   const container = useRef(null);
   const { scrollY } = useScroll();
   const rotation = useTransform(scrollY, [0, 1000], [0, 360]);
@@ -105,14 +105,5 @@ export default function Index({ isActive, toggleMenu }) {
         </div>
       </div>
     </motion.div>
-  );
-}
-
-function PerspectiveText({ label }) {
-  return (
-    <div className={styles.perspectiveText}>
-      <p>{label}</p>
-      <p>{label}</p>
-    </div>
   );
 }

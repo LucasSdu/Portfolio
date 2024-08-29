@@ -121,6 +121,17 @@
 }
 
 @media (max-width: 768px) {
+
+  .locationText {
+    left: 5px;
+    font-size: 15px;
+  }
+
+  .name {
+    right: 5px;
+    font-size: 15px;
+  }
+
   .space {
     margin-bottom: 200px;
   }
@@ -144,13 +155,7 @@
     height: auto;
   }
 
-  .timeLocationContainer {
-    display: none;
-  }
 
-  .name {
-    display: none;
-  }
 
   .firstname-container {
     padding-top: 20px;
@@ -159,7 +164,7 @@
 
   .firstname {
     font-size: 15vw;
-    padding-top: 50px;
+    padding-top: 80px;
     margin: 0;
   }
 }
