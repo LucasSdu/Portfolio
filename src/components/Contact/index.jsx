@@ -50,14 +50,14 @@ export default function Index({ isActive, toggleMenu }) {
       <div className={styles.body}>
         <div className={styles.title}>
           <div className={styles.firstword}>
-            {"Komm in".split("").map((letter, index) => (
+            {"Schreiben".split("").map((letter, index) => (
               <span key={index} className={styles[`letter${index + 1}`]}>
                 {letter}
               </span>
             ))}
           </div>
           <div className={styles.lastword}>
-            {"Kontakt".split("").map((letter, index) => (
+            {"Sie mir".split("").map((letter, index) => (
               <span key={index} className={styles[`letter${index + 1}`]}>
                 {letter}
               </span>
