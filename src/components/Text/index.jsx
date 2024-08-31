@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef, useEffect, useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -20,7 +21,12 @@ export default function Paragraph({ paragraph }) {
   });
 
   // Funktion zur Überprüfung der Mobilgeräte
-  const isMobile = () => window.innerWidth <= 768; // Definiere deine Breakpoint-Größe
+  const isMobile = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 768; // Definiere deine Breakpoint-Größe
+    }
+    return false; // Standardmäßig Desktop auf dem Server
+  };
 
   // Standard Icon-Größen
   const desktopSizes = {
@@ -43,30 +49,33 @@ export default function Paragraph({ paragraph }) {
   };
 
   // Zustand zur Verwaltung der aktuellen Icon-Größen basierend auf dem Gerät
-  const [animationSizes, setAnimationSizes] = useState(isMobile() ? mobileSizes : desktopSizes);
+  const [animationSizes, setAnimationSizes] = useState(desktopSizes);
 
   // Event Listener, um die Größe zu überprüfen, wenn das Fenster verändert wird
   useEffect(() => {
-    const handleResize = () => {
-      setAnimationSizes(isMobile() ? mobileSizes : desktopSizes);
-    };
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setAnimationSizes(isMobile() ? mobileSizes : desktopSizes);
+      };
 
-    window.addEventListener('resize', handleResize);
+      handleResize(); // Initiale Größe festlegen
+      window.addEventListener('resize', handleResize);
 
-    // Entferne den Event-Listener bei der Aufräumaktion
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      // Entferne den Event-Listener bei der Aufräumaktion
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   // Erstelle eine Zuordnung von Wörtern zu Lottie-Animationen
   const animations = {
-    "photography": cameraAnimationData,
-    "heart": heartAnimationData,
-    "develop": developAnimationData,
-    "strong": strongAnimationData,
-    "study": studyAnimationData,
-    "passion": passionAnimationData,
+    photography: cameraAnimationData,
+    heart: heartAnimationData,
+    develop: developAnimationData,
+    strong: strongAnimationData,
+    study: studyAnimationData,
+    passion: passionAnimationData,
   };
 
   // Text wird in Wörter geteilt, wobei das Icon hinzugefügt wird
