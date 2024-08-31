@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   const paragraph =
-    "Hey, ich bin Lucas Sdunnek, studiere Computervisualistik und Design in Lippstadt und habe eine Leidenschaft heart für gutes Design des, Fotografie photography und Frontend-Entwicklung develop. Ich liebe heart es, innovative Lösungen zu finden, ästhetische Designs zu entwickeln und die Funktionalität mit visueller Klarheit zu verbinden.";
+    "Hey, ich bin Lucas Sdunnek, studiere study Computervisualistik und Design in Lippstadt und habe eine Leidenschaft passion für gutes Design, Fotografie photography und Frontend-Entwicklung develop . Ich liebe heart es Interfaces zu designen mit einer wunderschönen und starken strong User Experience.";
 
   useEffect(() => {
     const lenis = new Lenis();

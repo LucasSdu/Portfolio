@@ -81,20 +81,63 @@ export default function Index({ isActive, toggleMenu }) {
               </motion.div>
             </div>
           </motion.div>
-          <motion.svg className={styles.arrow}
-            style={{ rotate, scale: 2 }}
-            width="9"
-            height="9"
-            viewBox="0 0 9 9"
-            fill="none"
-            color="#151310"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z"
-              fill="#151310"
-            />
-          </motion.svg>
+
+
+          <motion.svg
+  className={styles.arrow}
+  style={{ rotate: "220deg", scale: 2 }}
+  width="40"
+  height="40"
+  viewBox="0 0 66.73 104.14"
+  fill="#f0f0f0"  
+  stroke="#2b2018"  
+  strokeMiterlimit="10"
+  strokeWidth="2px"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  {/* Inhalte der SVG ohne interne Stile */}
+  <g id="OBJECTS">
+    <g>
+      <path
+        fill="#f0f0f0"  
+        stroke="#2b2018"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        d="M62.38,64.08s3.41,17.69-12.1,22.86c0,0,9.68,9.49-4.75,14.5-14.43,5.02-32.67-1.95-36.2-9.62-3.54-7.67,4.9-8.35,4.9-8.35-12.25-6.46-22.67-31.67.81-35.49,2.43-5.06-2.02-33.48,3.02-41.91,3.73-6.25,14.79-8.95,17.91,5.34,1.54,7.04.06,21.59-1.39,27.44,0,0,13.33-9.02,17.21,6.96,0,0,4.43-3.47,10.27.07,3.56,2.16,5.95,6.17.33,18.21Z"
+      />
+      <path
+        fill="#f0f0f0"
+        stroke="#2b2018"
+        strokeWidth="2"
+        strokeLinecap="round"
+        d="M27.72,88.04s12.09,3.24,22.56-1.1"
+      />
+    </g>
+    <path
+      fill="#f0f0f0"
+      stroke="#2b2018"
+      strokeWidth="2"
+      strokeLinecap="round"
+      d="M65.43,55.23c-3.2,14.12-11.41,26.27-20.91,20.41-10.98-6.78,4.14-20.84,4.14-20.84"
+    />
+    <path
+      fill="#f0f0f0"
+      stroke="#2b2018"
+      strokeWidth="2"
+      strokeLinecap="round"
+      d="M51.38,44.62c2.91,11.71-5.74,24.81-18.29,21.8-12.55-3.01,1.98-21.71,1.98-21.71"
+    />
+    <path
+      fill="#f0f0f0"
+      stroke="#2b2018"
+      strokeWidth="2"
+      strokeLinecap="round"
+      d="M15.04,47.97c14.42-1.32,24.2,10.98,22.68,19.03-1.52,8.05-11.12,10.72-22.99-4.82"
+    />
+  </g>
+</motion.svg>
+
+
         </div>
 
         <div className="mb-36">

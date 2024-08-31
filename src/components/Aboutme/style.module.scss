@@ -42,10 +42,10 @@
   transform: translateX(-50%);
 }
 .info span {
-  font-family: "Feoni", sans-serif;
+  font-family: "Brush", sans-serif;
   color: #151310;
   font-size: 8vw;
-  margin: -50px;
+  margin-top: -20%;
 }
 
 .heartContainer {
@@ -116,7 +116,7 @@
 .end {
   position: absolute;
   bottom: 5.6%;
-  left: 820px;
+  left: 670px;
   display: flex;
   align-items: center;
   font-family: "Feoni", sans-serif;
@@ -132,7 +132,7 @@
   gap: 10px;
   position: absolute;
   bottom: 5%;
-  left: 26%;
+  left: 380px;
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
@@ -141,7 +141,7 @@
 
 .firstname,
 .lastname {
-  font-size: 4vw;
+  font-size: 70px;
   line-height: 1;
 }
 

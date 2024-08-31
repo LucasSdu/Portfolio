@@ -73,15 +73,20 @@ export default function Index({}) {
         </div>
       </div>
 
+
+
+<div className={styles.container}>
 <div className={styles.gifContainer}>
           <img src="/images/Max_Goof.gif" alt="Animation" className={styles.gif} />
         </div>
-
-        <div>
+<div>
             <span>
-              <p className={styles.Text}>Willkommen zum Ende</p>
+              <p className={styles.Text}>Willkommen zum Ende. So schnell kann es gehen. In meiner Freizeit lese ich gerne ein gutes Buch, schaue eine Serie, treibe Sport und verbringe Zeit mit meinen Liebsten. <br/> Ich stehe noch ganz am Anfang meiner Reise und freue mich immer darauf, neue Erfahrungen zu sammeln und Neues zu lernen.
+              </p>
             </span>
           </div>
+</div>
+        
         <div className={styles.info}>
           <div>
             <span>
