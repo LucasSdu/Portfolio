@@ -3,7 +3,6 @@
 .wrapper {
   display: flex;
   align-items: flex-start;
-  padding: 20px;
 }
 
 .fixedContent {
@@ -11,7 +10,7 @@
   position: sticky;
   top:50%;
   width: 30%; 
-  padding: 20px;
+  padding-left: 35px;
   font-family: "Sloppy", serif;
   font-size: 65px;
 }
@@ -27,7 +26,6 @@
   font-size: 60px;
   line-height: 1;
   padding-left: 10%;
-  padding-right: 10%;
   font-family: "FeoniMedium", serif;
   color: #151310;
 }
@@ -41,15 +39,15 @@
 .shadow {
   position: absolute;
   opacity: 10%;
-  color: rgba(0, 0, 0, 0.2); /* Schattenfarbe */
+  color: rgba(0, 0, 0, 0.2); 
 }
 
 
 @media (max-width: 768px) {
   .wrapper {
-    display: block; /* Ändert das Layout von flex zu block */
-    padding: 10px; /* Entfernt den Abstand zum Rand */
-    margin: 0; /* Entfernt eventuelle Standard-Margins */
+    display: block; 
+    padding: 10px;
+    margin: 0;
   }
   
   .fixedContent {
@@ -57,25 +55,25 @@ display: none;
   }
   
   .scrollableContent {
-    width: 100%; /* Macht den Inhalt vollbreit */
-    padding: 0; /* Entfernt Padding */
-    margin: 0; /* Entfernt eventuelle Margins */
+    width: 100%; 
+    padding: 0;
+    margin: 0; 
   }
   
   .paragraph {
     display: flex;
     flex-wrap: wrap;
-    font-size: 7.25vw; /* Erhöht die Schriftgröße */
+    font-size: 7.25vw;
     line-height: 1;
-    padding-left: 0; /* Entfernt Padding */
-    padding-right: 0; /* Entfernt Padding */
+    padding-left: 0; 
+    padding-right: 0;
     font-family: "FeoniMedium", serif;
     color: #151310;
   }
   
   .word {
     position: relative;
-    margin-right: 5px; /* Entfernt Margin-Rechts */
-    margin-top: 15px; /* Entfernt Margin-Oben */
+    margin-right: 5px;
+    margin-top: 15px;
   }
 }

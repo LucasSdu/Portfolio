@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef, useEffect, useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 
-// Importiere alle Lottie JSON-Dateien
+
 import cameraAnimationData from '../../../public/json/Camera.json';
 import heartAnimationData from '../../../public/json/Heart.json';
 import developAnimationData from '../../../public/json/Develop.json';
@@ -20,15 +20,14 @@ export default function Paragraph({ paragraph }) {
     offset: ["start 0.5", "start 0.2"],
   });
 
-  // Funktion zur Überprüfung der Mobilgeräte
   const isMobile = () => {
     if (typeof window !== 'undefined') {
-      return window.innerWidth <= 768; // Definiere deine Breakpoint-Größe
+      return window.innerWidth <= 768;
     }
-    return false; // Standardmäßig Desktop auf dem Server
+    return false; 
   };
 
-  // Standard Icon-Größen
+
   const desktopSizes = {
     photography: { width: '50px', height: '50px' },
     heart: { width: '50px', height: '50px' },
@@ -38,7 +37,7 @@ export default function Paragraph({ paragraph }) {
     passion: { width: '60px', height: '60px' },
   };
 
-  // Icon-Größen für Mobilgeräte
+ 
   const mobileSizes = {
     photography: { width: '30px', height: '30px' },
     heart: { width: '30px', height: '30px' },
@@ -48,27 +47,23 @@ export default function Paragraph({ paragraph }) {
     passion: { width: '35px', height: '35px' },
   };
 
-  // Zustand zur Verwaltung der aktuellen Icon-Größen basierend auf dem Gerät
   const [animationSizes, setAnimationSizes] = useState(desktopSizes);
 
-  // Event Listener, um die Größe zu überprüfen, wenn das Fenster verändert wird
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const handleResize = () => {
         setAnimationSizes(isMobile() ? mobileSizes : desktopSizes);
       };
 
-      handleResize(); // Initiale Größe festlegen
+      handleResize();
       window.addEventListener('resize', handleResize);
 
-      // Entferne den Event-Listener bei der Aufräumaktion
       return () => {
         window.removeEventListener('resize', handleResize);
       };
     }
   }, []);
 
-  // Erstelle eine Zuordnung von Wörtern zu Lottie-Animationen
   const animations = {
     photography: cameraAnimationData,
     heart: heartAnimationData,
@@ -78,9 +73,8 @@ export default function Paragraph({ paragraph }) {
     passion: passionAnimationData,
   };
 
-  // Text wird in Wörter geteilt, wobei das Icon hinzugefügt wird
   const words = paragraph.split(/\s+/).map((word, index) => {
-    const cleanedWord = word.replace(/[.,!?"']/g, '').toLowerCase(); // Entferne Satzzeichen
+    const cleanedWord = word.replace(/[.,!?"']/g, '').toLowerCase(); 
     if (animations[cleanedWord]) {
       console.log(`Replacing '${word}' with animation.`);
       return (
@@ -88,8 +82,8 @@ export default function Paragraph({ paragraph }) {
           key={`icon-${index}`} 
           animationData={animations[cleanedWord]} 
           progress={scrollYProgress}
-          animationKey={cleanedWord} // Den Schlüssel übergeben
-          animationSizes={animationSizes} // animationSizes als Prop übergeben
+          animationKey={cleanedWord} 
+          animationSizes={animationSizes} 
         />
       );
     }
@@ -128,10 +122,9 @@ const Word = ({ children, progress, range }) => {
   );
 };
 
-// Ändere die IconWord-Komponente, um die richtige Animation anzuzeigen
 const IconWord = ({ animationData, progress, animationKey, animationSizes }) => {
   const opacity = useTransform(progress, [0, 1], [0, 1]);
-  const size = animationSizes[animationKey] || { width: '40px', height: '40px' }; // Standardgröße, falls keine Größe definiert ist
+  const size = animationSizes[animationKey] || { width: '40px', height: '40px' };
 
   return (
     <motion.span
@@ -142,7 +135,7 @@ const IconWord = ({ animationData, progress, animationKey, animationSizes }) => 
         autoplay
         loop
         src={animationData}
-        style={{ width: size.width, height: size.height }} // Dynamische Größen
+        style={{ width: size.width, height: size.height }}
       />
     </motion.span>
   );
