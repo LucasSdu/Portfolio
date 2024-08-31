@@ -9,28 +9,28 @@ import Image from "next/image";
 const projects = [
   {
     title: "Dishcovery",
-    src: "Dishcovery.png",
+    src: "Dishcovery.jpg",
     color: "#ECEBEB",
     link: "/dishcovery",
     description: "Design & Development",
   },
   {
     title: "Stop Motions Videos",
-    src: "Cocktails.png",
+    src: "Cocktails.jpg",
     color: "#ECEBEB",
     link: "/stopmotionvideos",
     description: "Photography",
   },
   {
     title: "Illustrationen",
-    src: "Plakate.png",
+    src: "Plakate.jpg",
     color: "#ECEBEB",
     link: "/illustrations",
     description: "Design",
   },
   {
     title: "Fotografie",
-    src: "Photography.JPG",
+    src: "Photography.jpg",
     color: "#ECEBEB",
     link: "/photography",
   },

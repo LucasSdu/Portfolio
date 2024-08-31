@@ -49,20 +49,17 @@ export default function Index({ isActive, toggleMenu }) {
 >
       <div className={styles.body}>
         <div className={styles.title}>
-          <div className={styles.firstword}>
-            {"Schreiben".split("").map((letter, index) => (
-              <span key={index} className={styles[`letter${index + 1}`]}>
-                {letter}
-              </span>
-            ))}
-          </div>
-          <div className={styles.lastword}>
-            {"Sie mir".split("").map((letter, index) => (
-              <span key={index} className={styles[`letter${index + 1}`]}>
-                {letter}
-              </span>
-            ))}
-          </div>
+        <div className={styles.firstword}>
+  <span className={styles.letter}>
+    Schreiben
+  </span>
+</div>
+<div className={styles.lastword}>
+  <span className={styles.letter}>
+    Sie mir
+  </span>
+</div>
+
 
           <motion.div style={{ x }} className={styles.buttonContainer}>
             <div className={styles.button} onClick={handleContactButtonClick}>
@@ -95,7 +92,7 @@ export default function Index({ isActive, toggleMenu }) {
   strokeWidth="2px"
   xmlns="http://www.w3.org/2000/svg"
 >
-  {/* Inhalte der SVG ohne interne Stile */}
+ 
   <g id="OBJECTS">
     <g>
       <path

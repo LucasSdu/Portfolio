@@ -5,7 +5,6 @@ import Lenis from "@studio-freight/lenis";
 import styles from "./page.module.scss";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
-
 import AboutMe from "../components/Aboutme";
 import Text from "../components/Text";
 
@@ -30,6 +29,7 @@ export default function Home() {
     <div
       className={`relative min-h-screen flex flex-col cursor-default bg-white100 ${styles["full-height-container"]}`}
     >
+     
       <main className={styles.main}>
         <AboutMe />
         <section id="aboutme"></section>
@@ -51,7 +51,7 @@ export default function Home() {
         </section>
       </main>
 
-      <div style={{ backgroundColor: "#b0bdd0", height: "50vh" }}></div>
+      <div style={{ backgroundColor: "#EDE9E6", height: "50vh" }}></div>
 
       <section>
         <Footer />

@@ -1,38 +1,64 @@
 .body {
     position: relative;
-    background-color: #b0bdd0;
+    background-color: #EDE9E6;
     display: flex;
     flex-direction: column;
     height: 100vh;
   }
   
-  .container{
+  .ende {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     position: absolute;
-    right: 20px;
-    padding-left: 80%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ende span {
+    font-family: "Brush", sans-serif;
+    color: #151310;
+    font-size: 8vw;
+    margin-top: -20%;
+  }
+  
+  .heartContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart {
+    width: 30px;
+    height: auto;
   }
 
   .gifContainer {
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    display: flex;
    
-    top:10px;
-    display: flex;
-    margin: 20px 0; 
   }
-  .Text{
-    color: #151310;
-    font-family: "FeoniMedium", serif;
- 
- 
-    top:30%;
- 
-    display: flex;
-    font-size: 20px;
-  }
-  
   .gif {
     max-width: 100%;
     height: auto;
   }
+  .Text{
+    color: #151310;
+    font-family: "FeoniLight", serif;
+    position: absolute;
+    right: 20px;
+    padding-left: 80%;
+ 
+    bottom:20%;
+ 
+    display: flex;
+    font-size: 18px;
+  }
+  
+ 
   .Im {
     position: absolute;
     bottom: 20.6%;
@@ -46,7 +72,7 @@
   .end {
     position: absolute;
     bottom: 20.6%;
-    left: 820px;
+    left: 670px;
     display: flex;
     align-items: center;
     font-family: "Feoni", sans-serif;
@@ -61,7 +87,7 @@
     gap: 10px;
     position: absolute;
     bottom: 20%;
-    left: 26%;
+    left: 380px;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
@@ -71,7 +97,7 @@
   
   .firstname,
   .lastname {
-    font-size: 5vw;
+    font-size: 70px;
     line-height: 1;
   }
   
@@ -106,7 +132,7 @@
   .letter7 {
     font-family: "FeoniMedium", sans-serif;
   }
-  .info {
+  .infofooter {
     font-family: "Feoni", sans-serif;
     display: flex;
     gap: 20px;
@@ -115,33 +141,33 @@
     width: calc(100% - 40px);
     max-width: 1800px;
     position: absolute;
-    bottom:150px;
+    bottom: 15%;
    
-
+  
     div {
         display: flex;
         gap: 20px;
         align-items: center;
-
+  
         .nonClickableText {
           font-family: "Brush", sans-serif;
             cursor: default;
             font-weight: 300;
         }
-
+  
         p,
         h3 {
             margin: 0px;
             padding: 2.5px;
             cursor: pointer;
         }
-
+  
         span {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-
+  
         h3 {
             color: #151310;
             cursor: default;
@@ -149,7 +175,7 @@
             font-size: 1em;
         }
     }
-}
+  }
 
   
   @media (max-width: 768px) {
@@ -159,34 +185,19 @@
     .end {
       display: none;
     }
-    .gifContainer {
-      position: relative;
-      top:10px;
-      display: flex;
-      justify-content: center;
-  margin-top: 200px;
-    }
     .Text{
-      color: #151310;
-      font-family: "Brush", serif;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      font-size: 20px;
+     display: none;
     }
-    
-    .gif {
-      max-width: 100%;
-      height: auto;
-    }
+   
+  
     .nameContainer {
       display: flex;
       justify-content: center;
       align-items:last baseline;
       gap: 5px;
       position: absolute;
-      bottom:80px;
-      left: 50%;
+      bottom:60px;
+      left: 48%;
       transform: translateX(-50%);
       width: 100%;
       text-align: center;
@@ -197,24 +208,28 @@
     font-size: 12vw;
     line-height: 1;
   }
+  .ende {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ende span {
+    font-size: 12vw;
+    margin-top: -10px;
+    margin-left: 15px;
+  }
   
   .svg {
     width: 20px;
     height: 20px;
   }
-  .info {
-    left: 5%;
+  .infofooter{
     bottom: 30px;
-    gap: 10px;
-   
-
-    div {
-        gap: 10px;
-        p,
-        h3 {
-            font-size: 14px;
-        }
-    }
+    left: 13px;
   }
 }
   

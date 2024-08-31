@@ -48,20 +48,12 @@
 @media (max-width: 768px) {
   .wrapper {
     display: block; /* Ändert das Layout von flex zu block */
-    padding: 0; /* Entfernt den Abstand zum Rand */
+    padding: 10px; /* Entfernt den Abstand zum Rand */
     margin: 0; /* Entfernt eventuelle Standard-Margins */
   }
   
   .fixedContent {
-    position: relative;
-    color: #151310;
-    width: 100%; /* Macht den Inhalt vollbreit */
-    padding: 0; /* Entfernt Padding, um den Rand voll auszunutzen */
-    font-family: "FeoniMedium", serif;
-    font-size: 5vw; /* Erhöht die Schriftgröße */
-    opacity: 30%;
-    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
-    margin: 0; /* Entfernt eventuelle Margins */
+display: none;
   }
   
   .scrollableContent {

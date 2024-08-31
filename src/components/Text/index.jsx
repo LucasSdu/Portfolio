@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 // Importiere alle Lottie JSON-Dateien
@@ -10,7 +10,6 @@ import strongAnimationData from '../../../public/json/Strong.json';
 import studyAnimationData from '../../../public/json/Study.json';
 import passionAnimationData from '../../../public/json/Passion.json';
 
-
 import styles from './style.module.scss';
 
 export default function Paragraph({ paragraph }) {
@@ -20,6 +19,46 @@ export default function Paragraph({ paragraph }) {
     offset: ["start 0.5", "start 0.2"],
   });
 
+  // Funktion zur Überprüfung der Mobilgeräte
+  const isMobile = () => window.innerWidth <= 768; // Definiere deine Breakpoint-Größe
+
+  // Standard Icon-Größen
+  const desktopSizes = {
+    photography: { width: '50px', height: '50px' },
+    heart: { width: '50px', height: '50px' },
+    develop: { width: '50px', height: '50px' },
+    strong: { width: '60px', height: '60px' },
+    study: { width: '50px', height: '50px' },
+    passion: { width: '60px', height: '60px' },
+  };
+
+  // Icon-Größen für Mobilgeräte
+  const mobileSizes = {
+    photography: { width: '30px', height: '30px' },
+    heart: { width: '30px', height: '30px' },
+    develop: { width: '30px', height: '30px' },
+    strong: { width: '35px', height: '35px' },
+    study: { width: '30px', height: '30px' },
+    passion: { width: '35px', height: '35px' },
+  };
+
+  // Zustand zur Verwaltung der aktuellen Icon-Größen basierend auf dem Gerät
+  const [animationSizes, setAnimationSizes] = useState(isMobile() ? mobileSizes : desktopSizes);
+
+  // Event Listener, um die Größe zu überprüfen, wenn das Fenster verändert wird
+  useEffect(() => {
+    const handleResize = () => {
+      setAnimationSizes(isMobile() ? mobileSizes : desktopSizes);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Entferne den Event-Listener bei der Aufräumaktion
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   // Erstelle eine Zuordnung von Wörtern zu Lottie-Animationen
   const animations = {
     "photography": cameraAnimationData,
@@ -28,14 +67,6 @@ export default function Paragraph({ paragraph }) {
     "strong": strongAnimationData,
     "study": studyAnimationData,
     "passion": passionAnimationData,
-  };
-  const animationSizes = {
-    "photography": { width: '50px', height: '50px' },
-    "heart": { width: '50px', height: '50px' },
-    "develop": { width: '50px', height: '50px' },
-    "strong": { width: '60px', height: '60px' },
-    "study": { width: '50px', height: '50px' },
-    "passion": { width: '60px', height: '60px' },
   };
 
   // Text wird in Wörter geteilt, wobei das Icon hinzugefügt wird
@@ -55,8 +86,6 @@ export default function Paragraph({ paragraph }) {
     }
     return word;
   });
-  
-  
 
   return (
     <div className={styles.wrapper}>

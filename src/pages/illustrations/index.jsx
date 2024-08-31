@@ -49,44 +49,44 @@ export default function ContactPage() {
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/noofgpsvnrotb519df6o",
       align: "left",
-      width: 800,
-      height: 1200,
+      width: 500,
+      height: 900,
     },
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/lus6ceikl2gibkwvcney",
       align: "center",
-      width: 800,
-      height: 1200,
+      width: 500,
+      height: 900,
     },
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/pglhxwoe08xtrr8ltc1h",
       align: "center",
-      width: 800,
-      height: 1200,
+      width: 900,
+      height: 500,
     },
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/dpskven4ahlvpzoieubx",
       align: "right",
-      width: 800,
-      height: 1200,
+      width: 500,
+      height: 900,
     },
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/fycxworvyhxqk0aa00wo",
       align: "left",
-      width: 800,
-      height: 1200,
+      width: 500,
+      height: 900,
     },
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/x0pqdp7vrgbwdtpbuxi5",
       align: "right",
-      width: 800,
-      height: 1200,
+      width: 500,
+      height: 900,
     },
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/rtmiif8iq15pzqnsmc8p",
       align: "center",
-      width: 800,
-      height: 1200,
+      width: 900,
+      height: 500,
     },
   ];
 
@@ -134,7 +134,7 @@ export default function ContactPage() {
       <div className="mb-40"></div>
      
     </div>
-    <div style={{ backgroundColor: "#b0bdd0", height: "50vh" }}></div>
+    <div style={{ backgroundColor: "#EDE9E6", height: "50vh" }}></div>
     <div>
       <Footer />
       </div>

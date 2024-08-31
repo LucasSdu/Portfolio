@@ -31,7 +31,7 @@
   content: "";
   width: 0%;
   height: 2px;
-  background-color: #b0bdd0;
+  background-color: #12171A;
   display: block;
   margin-top: 2px;
   position: relative;
@@ -79,7 +79,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #EDE6E6;
   pointer-events: none;
   overflow: hidden;
   z-index: 3;
@@ -112,8 +112,8 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #b0bdd0;
-  color: white;
+  background-color: #EDE6E6;
+  color: black;
   position: fixed;
   z-index: 3;
   display: flex;
