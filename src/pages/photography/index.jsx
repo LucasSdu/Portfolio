@@ -149,7 +149,7 @@ export default function Phorography() {
 
   return (
     <div
-      className={`relative min-h-screen flex flex-col cursor-default bg-white100 ${styles["full-height-container"]}`}
+      className={`relative min-h-screen flex flex-col cursor-default bg-white ${styles["full-height-container"]}`}
     >
       <main className={styles.main}>
       <div className={styles.name}>
@@ -191,7 +191,7 @@ export default function Phorography() {
         ))}
       </main>
 
-      <div style={{ backgroundColor: "#EDE9E6", height: "50vh" }}></div>
+      <div style={{ backgroundColor: "#ffffff", height: "50vh" }}></div>
 
       <section>
         <Footer />

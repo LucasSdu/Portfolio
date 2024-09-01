@@ -1,11 +1,14 @@
 .body {
+  background-color: #3C05FC;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 }
 
 .locationText {
+  color: white;
   position: fixed;
   z-index: 99;
   mix-blend-mode: difference;
@@ -19,6 +22,7 @@
   opacity: 70%;
 }
 .name {
+  color: white;
   mix-blend-mode: difference;
   position: fixed;
   top: 20px;
@@ -40,16 +44,38 @@
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  align-items: center;
+}
+.title {
+  margin-top: -14%;
 }
 .info span {
-  font-family: "Brush", sans-serif;
-  color: #151310;
+  color: #D4E9FB;
   font-size: 8vw;
-  margin-top: -20%;
 }
-
+.letter1 {
+  font-family: "Monsieur", serif;
+}
+.letter2 {
+  font-family: "FeoniLight", serif;
+}
+.letter3 {
+  font-family: "FeoniLight", serif;
+}
+.letter4 {
+  font-family: "FeoniLight", serif;
+}
+.letter5 {
+  font-family: "FeoniLight", serif;
+}
+.letter6 {
+  font-family: "FeoniLight", serif;
+}
+.letter7 {
+  font-family: "FeoniLight", serif;
+}
 .heartContainer {
-  margin-top: 50px;
+  margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,18 +86,6 @@
   height: auto;
 }
 
-.about {
-  mix-blend-mode: difference;
-  position: absolute;
-  top: 45%;
-  left: 40%;
-  transform: translateX(-50%);
-  font-size: 5vw;
-  font-family: "Brush", sans-serif;
-  gap: 10px;
-  z-index: 99;
-}
-
 .container {
   position: relative;
   top: 70%;
@@ -79,152 +93,158 @@
   align-items: center;
   justify-content: space-around;
 
-.bezierkurve {
-  text-align: center;
+  .bezierkurve {
+    text-align: center;
 
-.line {
-  border: 0;
-  border-top: 1px solid #151310; 
-  margin: 10px 50px;
-  z-index: 99;
-}
-}
+    .line {
+      border: 0;
+      border-top: 1px solid #D4E9FB;
+      margin: 10px 50px;
+      z-index: 99;
+    }
+  }
 }
 .birth {
   text-align: center;
-  font-family: "Brush", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   font-size: 20px;
-  color: #151310;
+  color: #f0eeff;
 }
 .year {
   text-align: center;
-  font-family: "Brush", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   font-size: 20px;
-  color: #151310;
+  color: #f0eeff;
 }
 
-.Im {
-  position: absolute;
-  bottom: 5.6%;
-  left: 35px;
+.containerItem {
   display: flex;
-  align-items: center;
-  font-family: "Feoni", sans-serif;
-  font-size: 20px;
-  color: #151310;
-}
-.end {
+  flex-direction: column;
+  align-items: flex-start;
   position: absolute;
-  bottom: 5.6%;
-  left: 670px;
-  display: flex;
-  align-items: center;
-  font-family: "Feoni", sans-serif;
-  font-size: 20px;
-  color: #151310;
+  bottom: 0;
+  right: 0;
+  padding: 35px;
+  color: #D4E9FB;
 }
 
-
-.nameContainer {
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-  gap: 10px;
-  position: absolute;
-  bottom: 5%;
-  left: 380px;
-  transform: translateX(-50%);
+.lineItem {
+  position: relative;
+  font-size: 30px;
+  padding: 0px 0;
   width: 100%;
-  text-align: center;
-  color: #151310;
 }
 
-.firstname,
-.lastname {
-  font-size: 70px;
-  line-height: 1;
+.lineItem::before,
+.lineItem::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #D4E9FB;
+  width: 100%;
+  left: 0;
 }
 
-.svgContainer {
-  display: flex;
-  align-items: last baseline;
-  justify-content: center;
-}
-.svg {
-  width: 30px;
-  height: auto;
+.lineItem:first-child::before {
+  top: 0;
 }
 
-.letter1 {
-  font-family: "FeoniMedium", serif;
+.lineItem:not(:first-child)::before {
+  display: none;
 }
-.letter2 {
-  font-family: "FeoniMedium", serif;
+
+.lineItem:not(:last-child)::after {
+  bottom: 0;
 }
-.letter3 {
-  font-family: "FeoniMedium", serif;
+
+.lineItem:last-child::after {
+  display: none;
 }
-.letter4 {
-  font-family: "FeoniMedium", serif;
+
+.Text {
+  font-size: 15px;
+  width: 300px;
+  font-family: "FeoniLight", sans-serif;
 }
-.letter5 {
-  font-family: "FeoniMedium", serif;
+
+.Title {
+  font-family: "FeoniMedium", sans-serif;
 }
-.letter6 {
-  font-family: "FeoniMedium", serif;
+
+.cls3{
+  fill: #D4E9FB;
 }
-.letter7 {
-  font-family: "FeoniMedium", serif;
-}
+
+
 .infofooter {
-  font-family: "Feoni", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   display: flex;
   gap: 20px;
-  left:30px;
-  color: #151310;
+  left: 30px;
+  color: #D4E9FB;
   width: calc(100% - 40px);
   max-width: 1800px;
   position: absolute;
-  bottom:15px;
- 
+  bottom: 15px;
 
   div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .nonClickableText {
+      font-family: "FeoniLight", sans-serif;
+      cursor: default;
+      font-weight: 300;
+    }
+
+    p,
+    h3 {
+      margin: 0px;
+      padding: 2.5px;
+      cursor: pointer;
+    }
+
+    span {
       display: flex;
-      gap: 20px;
-      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-      .nonClickableText {
-        font-family: "Brush", sans-serif;
-          cursor: default;
-          font-weight: 300;
-      }
-
-      p,
-      h3 {
-          margin: 0px;
-          padding: 2.5px;
-          cursor: pointer;
-      }
-
-      span {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-      }
-
-      h3 {
-          color: #151310;
-          cursor: default;
-          font-weight: 300;
-          font-size: 1em;
-      }
   }
 }
 @media (max-width: 768px) {
- 
-.container{
-  display: none;
-}
+  .containerItem {
+    bottom: 30px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .lineItem {
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+
+  .Text {
+    display: none;
+
+  }
+
+
+
+
+  .bezierkurve {
+    display: none;
+  }
+
+  .container {
+    top: 45%;
+  }
+  .year,
+  .birth{
+    font-size: 10px;
+  }
 
   .locationText {
     left: 5px;
@@ -240,45 +260,43 @@
     font-size: 12vw;
     margin: -10px;
   }
-  
-  .container {
-    top: 75%;
-  }
-  
-  .Im {
-    display: none;
-  }
-  .end {
-    display: none;
+
+
+ 
+
+  .infofooter {
+   display: none;
   }
 
-  .infofooter{
-    bottom: 60px;
-    left: 13px;
-  }
 
-  .nameContainer {
+  .info {
     display: flex;
-    justify-content: center;
-    align-items: last baseline;
-    gap: 5px;
+    flex-direction: column;
+    align-items: left;
     position: absolute;
-    bottom: 90px;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    color: #151310;
   }
-
-  .firstname,
-  .lastname {
+  .title {
+    margin-top: -10%;
+    letter-spacing: 20px;
+  }
+  .info span {
+    color: #D4E9FB;
     font-size: 12vw;
-    line-height: 1;
+    gap: 2px;
   }
 
-  .svg {
+  .heartContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart {
     width: 20px;
-    height: 20px;
+    height: auto;
   }
 }

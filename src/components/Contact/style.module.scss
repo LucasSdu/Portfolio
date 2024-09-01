@@ -9,28 +9,27 @@
     padding-top: 200px;
     width: 100%;
     max-width: 500px;
-    background-color: #EDE9E6;
+    background-color: #3c05fc;
     padding: 20px;
     border-radius: 5px;
 
     .title {
-      border-bottom: 1px solid #151310;
+      border-bottom: 1px solid #f0eeff;
       padding-bottom: 100px;
       position: relative;
 
       .firstword {
-        color: #151310;
+        color: #D4E9FB;
         font-size: 4vw;
         margin-bottom: -20px;
         font-family: "FeoniLight", sans-serif;
       }
       .lastword {
-        color: #151310;
+        color: #D4E9FB;
         font-size: 4vw;
         margin-bottom: 100px;
         font-family: "FeoniLight", sans-serif;
       }
-
     }
 
     .buttonContainer {
@@ -41,19 +40,30 @@
 
     .text {
       font-family: "FeoniLight", sans-serif;
+      color: #D4E9FB;
+    }
+
+    .buttonContainer {
+      position: absolute;
+      left: calc(100% - 350px);
+      top: calc(100% - 75px);
+    }
+
+    .text {
+      font-family: "Feoni", sans-serif;
       color: #151310;
     }
 
     .button {
       margin-bottom: 40px;
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       cursor: pointer;
       overflow: hidden;
-      font-family: "FeoniLight", sans-serif;
-      background-color: #f0f0f0;
-      border: 1px solid #151310;
-      color: #151310;
+      font-family: "Feoni", sans-serif;
+      background-color: #3c05fc;
+      border: 1px solid #D4E9FB;
+      color: #D4E9FB;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -68,9 +78,9 @@
         .el {
           width: 100%;
           height: 100%;
-          color: #151310;
-          font-family: "FeoniLight", sans-serif;
-          font-size: 1.5vw;
+          color: #D4E9FB;
+          font-family: "Feoni", sans-serif;
+          font-size: 1vw;
           p {
             margin: 0px;
           }
@@ -99,7 +109,6 @@
     }
   }
 
-
   .perspectiveText {
     display: flex;
     flex-direction: column;
@@ -112,6 +121,7 @@
     p {
       transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
       pointer-events: none;
+      text-transform: uppercase;
       &:nth-of-type(2) {
         position: absolute;
         transform-origin: bottom center;
@@ -129,22 +139,18 @@
     .body {
       height: 400px;
       width: 300px;
-      background-color: #ecebeb;
 
       .title {
-        border-bottom: 1px solid #151310;
         padding-bottom: 20px;
         position: relative;
 
         .firstword {
-          color: #151310;
           font-size: 50px;
-       
         }
 
         .lastword {
           margin-top: 20px;
-          color: #151310;
+
           font-size: 50px;
         }
       }

@@ -1,11 +1,13 @@
 .project {
   display: flex;
   align-items: center;
-  width: 80%;
-  padding: 50px;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
   border-bottom: 1px solid rgb(201, 201, 201);
   cursor: pointer;
   transition: opacity 0.2s ease;
+  
 }
 
 .projectContent {
@@ -18,26 +20,13 @@
 
 .project h2 {
   font-size: 60px;
-  margin: 0 20px 0 0;
   font-weight: 400;
-  font-family: "Feoni", sans-serif;
+  font-family: "FeoniMedium", sans-serif;
   color: #151310;
   position: relative;
   overflow: hidden;
   padding-bottom: 5px;
-}
-
-.project h2::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background-color: #12171A;
-  display: block;
-  margin-top: 2px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: width 0.2s linear;
+  transition: filter 0.2s ease; 
 }
 
 .project:hover h2::after {
@@ -45,18 +34,19 @@
 }
 
 .projectDescription {
-  font-family: "Feoni", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   font-size: 16px;
   color: #151310;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.2s ease;
 }
 
 .project:hover {
   opacity: 0.8;
 }
 
+.project:hover h2,
 .project:hover .projectDescription {
-  transform: translateX(5px);
+  filter: blur(3px);
 }
 
 .body {
@@ -66,9 +56,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 100px;
+
 }
 
 .modalContainer {
@@ -79,7 +68,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #EDE6E6;
   pointer-events: none;
   overflow: hidden;
   z-index: 3;
@@ -108,12 +96,12 @@
 
 .cursor,
 .cursorLabel {
-  font-family: "Sloppy", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #EDE6E6;
-  color: black;
+  background-color: #3C05FC;
+  color: #D4E9FB;
   position: fixed;
   z-index: 3;
   display: flex;
@@ -134,22 +122,26 @@
   z-index: 1000;
 }
 
-
-
-
-
-
 @media (max-width: 768px) {
+
+  .project:hover {
+    opacity: 0.8;
+  }
+  
+  .project:hover h2,
+  .project:hover .projectDescription {
+    filter: blur(0px);
+  }
+
   .project {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 50px;
     border-bottom: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: opacity 0.2s ease;
   }
-  
+
   .projectContent {
     display: flex;
     flex-direction: row;
@@ -157,7 +149,7 @@
     width: 100%;
     align-items: center;
   }
-  
+
   .project h2 {
     font-size: 20px;
     margin: 0 20px 0 0;
@@ -168,27 +160,31 @@
     overflow: hidden;
     padding-bottom: 0px;
   }
+  
   .projectDescription {
     font-family: "Feoni", sans-serif;
     font-size: 10px;
     color: #151310;
     transition: transform 0.3s ease;
   }
+
   .body {
     max-width: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
-    justify-content:flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
   }
+
   .cursor,
   .cursorLabel {
     display: none;
   }
+
   .modalContainer {
     display: none;
   }

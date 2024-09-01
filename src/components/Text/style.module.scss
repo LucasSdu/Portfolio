@@ -1,32 +1,14 @@
 /* style.module.scss */
 
-.wrapper {
-  display: flex;
-  align-items: flex-start;
-}
 
-.fixedContent {
-  color: #151310;
-  position: sticky;
-  top:50%;
-  width: 30%; 
-  padding-left: 35px;
-  font-family: "Sloppy", serif;
-  font-size: 65px;
-}
 
-.scrollableContent {
-  flex: 1; 
-  padding: 20px;
-}
 
 .paragraph {
   display: flex;
   flex-wrap: wrap;
   font-size: 60px;
   line-height: 1;
-  padding-left: 10%;
-  font-family: "FeoniMedium", serif;
+  font-family: "FeoniLight", serif;
   color: #151310;
 }
 

@@ -29,29 +29,30 @@ export default function Home() {
     <div
       className={`relative min-h-screen flex flex-col cursor-default bg-white100 ${styles["full-height-container"]}`}
     >
-     
       <main className={styles.main}>
         <AboutMe />
-        <section id="aboutme"></section>
         <div className="lg:mb-20 md:mb-1"></div>
-        <Text paragraph={paragraph} />
-        <div className="lg:mb-96 mb-28"></div>
-        <div className={styles.title}>
-          <h1>Projekte</h1>
-          <hr className={styles.line} />
-        </div>
-        <div className="lg:mb-10 md:mb-1"></div>
-        <section id="projects">
+
+        <div className={styles.container}>
+          <Text paragraph={paragraph} />
+
+          <div className="lg:mb-96 mb-28"></div>
+
+          <div className={styles.titleProjects}>
+            <h1>Ausgewählte Projekte</h1>
+          </div>
+
           <Projects />
-        </section>
+        </div>
+
         <div className="lg:mb-96 md:mb-1"></div>
 
-        <section id="contact" className="mt-96">
+        <div className="mt-96">
           <Contact />
-        </section>
+        </div>
       </main>
 
-      <div style={{ backgroundColor: "#EDE9E6", height: "50vh" }}></div>
+      <div style={{ backgroundColor: "#fffff", height: "50vh" }}></div>
 
       <section>
         <Footer />

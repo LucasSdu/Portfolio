@@ -91,11 +91,9 @@ export default function Paragraph({ paragraph }) {
   });
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.fixedContent}>
-        <h2>Über mich</h2>
-      </div>
-      <div className={styles.scrollableContent}>
+ 
+  
+   
         <p ref={container} className={styles.paragraph}>
           {words.map((word, i) => {
             const start = i / words.length;
@@ -107,8 +105,8 @@ export default function Paragraph({ paragraph }) {
             );
           })}
         </p>
-      </div>
-    </div>
+   
+  
   );
 }
 

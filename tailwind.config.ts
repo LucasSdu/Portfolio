@@ -16,7 +16,7 @@ const config: Config = {
       colors: {
         orange: "#151310",
         beige: "#FFFFFF",
-        white100: "#EDE9E6",
+        white100: "#FFFFFF",
         rot: "#FD3D00"
       },
       fontFamily: {

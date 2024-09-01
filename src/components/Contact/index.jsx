@@ -61,7 +61,7 @@ export default function Index({ isActive, toggleMenu }) {
 </div>
 
 
-          <motion.div style={{ x }} className={styles.buttonContainer}>
+<motion.div style={{ x }} className={styles.buttonContainer}>
             <div className={styles.button} onClick={handleContactButtonClick}>
               <motion.div
                 className={styles.slider}
@@ -73,7 +73,7 @@ export default function Index({ isActive, toggleMenu }) {
                 }}
               >
                 <div className={styles.el}>
-                  <PerspectiveText label="Hier" />
+                  <PerspectiveText label="Here" />
                 </div>
               </motion.div>
             </div>
@@ -145,7 +145,7 @@ export default function Index({ isActive, toggleMenu }) {
     <div className="fixed top-[-10vh] left-0 h-[100vh] w-full">
         <motion.div style={{ y: imageY }} className="relative w-full h-full">
           <Image
-            src="https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/dp4gbaauxhuzbqydgfgx"
+            src="/images/Background.jpg"
             fill
             alt="Background Image"
             style={{ objectFit: "cover" }}

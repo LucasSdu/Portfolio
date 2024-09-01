@@ -1,235 +1,163 @@
 .body {
-    position: relative;
-    background-color: #EDE9E6;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  .ende {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .ende span {
-    font-family: "Brush", sans-serif;
-    color: #151310;
-    font-size: 8vw;
-    margin-top: -20%;
-  }
-  
-  .heartContainer {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .heart {
-    width: 30px;
-    height: auto;
-  }
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
 
-  .gifContainer {
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    display: flex;
-   
-  }
-  .gif {
-    max-width: 100%;
-    height: auto;
-  }
-  .Text{
-    color: #151310;
-    font-family: "FeoniLight", serif;
-    position: absolute;
-    right: 20px;
-    padding-left: 80%;
- 
-    bottom:20%;
- 
-    display: flex;
-    font-size: 18px;
-  }
-  
- 
-  .Im {
-    position: absolute;
-    bottom: 20.6%;
-    left: 35px;
-    display: flex;
-    align-items: center;
-    font-family: "Feoni", sans-serif;
-    font-size: 20px;
-    color: #151310;
-  }
-  .end {
-    position: absolute;
-    bottom: 20.6%;
-    left: 670px;
-    display: flex;
-    align-items: center;
-    font-family: "Feoni", sans-serif;
-    font-size: 20px;
-    color: #151310;
-  }
-  
-  .nameContainer {
-    display: flex;
-    justify-content: center;
-    align-items: last baseline;
-    gap: 10px;
-    position: absolute;
-    bottom: 20%;
-    left: 380px;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    color: #151310;
-    z-index: 99;
-  }
-  
-  .firstname,
-  .lastname {
-    font-size: 70px;
-    line-height: 1;
-  }
-  
-  .svgContainer {
-    display: flex;
-    align-items: last baseline;
-    justify-content: center;
-  }
-  .svg {
-    width: 30px;
-    height: auto;
-  }
-  
-  .letter1 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .letter2 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .letter3 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .letter4 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .letter5 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .letter6 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .letter7 {
-    font-family: "FeoniMedium", sans-serif;
-  }
-  .infofooter {
-    font-family: "Feoni", sans-serif;
+
+
+.containerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 120px;
+  right: 0;
+  padding: 35px;
+  color: #f0eeff;
+}
+
+
+.gifOverlay img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.lineItem {
+  position: relative;
+  font-size: 30px;
+  padding: 0px 0;
+  width: 100%;
+  color: #3C05FC;
+}
+
+.lineItem::before,
+.lineItem::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #3C05FC;
+  width: 100%;
+  left: 0;
+}
+
+.lineItem:first-child::before {
+  top: 0;
+}
+
+.lineItem:not(:first-child)::before {
+  display: none;
+}
+
+.lineItem:not(:last-child)::after {
+  bottom: 0;
+}
+
+.lineItem:last-child::after {
+  display: none;
+}
+
+.Text {
+  color: #3C05FC;
+  font-size: 15px;
+  width: 300px;
+  font-family: "FeoniLight", sans-serif;
+}
+
+.Title {
+  font-family: "FeoniMedium", sans-serif;
+}
+
+.cls3{
+  fill: #3C05FC;
+}
+
+
+.infofooter {
+  font-family: "FeoniLight", sans-serif;
+  display: flex;
+  gap: 20px;
+  left: 30px;
+  color: #3C05FC;
+  width: calc(100% - 40px);
+  max-width: 1800px;
+  position: absolute;
+  bottom: 145px;
+
+  div {
     display: flex;
     gap: 20px;
-    left:30px;
-    color: #151310;
-    width: calc(100% - 40px);
-    max-width: 1800px;
-    position: absolute;
-    bottom: 15%;
-   
-  
-    div {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-  
-        .nonClickableText {
-          font-family: "Brush", sans-serif;
-            cursor: default;
-            font-weight: 300;
-        }
-  
-        p,
-        h3 {
-            margin: 0px;
-            padding: 2.5px;
-            cursor: pointer;
-        }
-  
-        span {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-  
-        h3 {
-            color: #151310;
-            cursor: default;
-            font-weight: 300;
-            font-size: 1em;
-        }
+    align-items: center;
+
+    .nonClickableText {
+      font-family: "FeoniLight", sans-serif;
+      cursor: default;
+      font-weight: 300;
     }
+
+    p,
+    h3 {
+      margin: 0px;
+      padding: 2.5px;
+      cursor: pointer;
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    h3 {
+      color: #3C05FC;
+      cursor: default;
+      font-weight: 300;
+    }
+  }
+}
+@media (max-width: 768px) {
+
+
+  .containerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 120px;
+    left: 13px;
+    right: 13px;
+    padding: 0px;
+    color: #f0eeff;
+  }
+  
+  
+  .gifOverlay img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  
+
+  
+  
+  
+  .Text {
+    color: #3C05FC;
+    font-size: 15px;
+    width: 100%;
+    font-family: "FeoniLight", sans-serif;
   }
 
   
-  @media (max-width: 768px) {
-    .Im {
-      display: none;
-    }
-    .end {
-      display: none;
-    }
-    .Text{
-     display: none;
-    }
-   
-  
-    .nameContainer {
-      display: flex;
-      justify-content: center;
-      align-items:last baseline;
-      gap: 5px;
-      position: absolute;
-      bottom:60px;
-      left: 48%;
-      transform: translateX(-50%);
-      width: 100%;
-      text-align: center;
-      color: #151310;
-    }
-    .firstname,
-  .lastname {
-    font-size: 12vw;
-    line-height: 1;
-  }
-  .ende {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .ende span {
-    font-size: 12vw;
-    margin-top: -10px;
-    margin-left: 15px;
-  }
-  
-  .svg {
-    width: 20px;
-    height: 20px;
-  }
-  .infofooter{
+
+  .infofooter {
     bottom: 30px;
     left: 13px;
   }
+
 }
-  

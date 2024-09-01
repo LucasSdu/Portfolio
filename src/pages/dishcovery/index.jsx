@@ -148,7 +148,7 @@ export default function ContactPage() {
         ))}
         <div className="lg:mb-96 md:mb-1"></div>
       </div>
-      <div style={{ backgroundColor: "#EDE9E6", height: "50vh" }}></div>
+      <div style={{ backgroundColor: "#ffffff", height: "50vh" }}></div>
       <div>
         <Footer />
       </div>

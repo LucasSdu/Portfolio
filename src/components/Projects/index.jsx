@@ -10,28 +10,28 @@ const projects = [
   {
     title: "Dishcovery",
     src: "Dishcovery.jpg",
-    color: "#ECEBEB",
+  
     link: "/dishcovery",
     description: "Design & Development",
   },
   {
     title: "Stop Motions Videos",
     src: "Cocktails.jpg",
-    color: "#ECEBEB",
+   
     link: "/stopmotionvideos",
     description: "Photography",
   },
   {
     title: "Illustrationen",
     src: "Plakate.jpg",
-    color: "#ECEBEB",
+  
     link: "/illustrations",
     description: "Design",
   },
   {
     title: "Fotografie",
     src: "Photography.jpg",
-    color: "#ECEBEB",
+  
     link: "/photography",
   },
 ];

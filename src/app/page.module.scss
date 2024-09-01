@@ -2,42 +2,18 @@
   position: relative;
   cursor: default;
 }
-.title h1{
-  margin-left: 50px;
-  font-family: "Feoni", sans-serif;
-  color: #151310;
-  font-size: 20px;
-}
-.line {
-  border: 0;
-  border-top: 1px solid #151310; 
-  margin: 10px 50px;
+
+.container {
+  padding: 60px;
 }
 
+.titleProjects {
+  color: black;
+  font-family: "FeoniLight", sans-serif;
+}
 
 @media only screen and (max-width: 768px) {
-  .mobile-fixed-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0;
-    transform: none !important;
-  }
-  .title h1{
-    margin-left: 10px;
-    font-family: "Feoni", sans-serif;
-    color: #151310;
-    font-size: 20px;
-  }
-  .line {
-    border: 0;
-    border-top: 1px solid #151310; 
-    margin: 10px 0px;
+  .container {
+    padding: 10px;
   }
 }
-
-
-
-
