@@ -79,7 +79,6 @@ export default function Index({ isActive, toggleMenu }) {
             </div>
           </motion.div>
 
-
           <motion.svg
   className={styles.arrow}
   style={{ rotate: "220deg", scale: 2 }}
