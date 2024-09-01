@@ -80,3 +80,9 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Monsieur";
+  src: url("../../public/fonts/MonsieurLaDoulaise-Regular.ttf");
+  font-weight: medium;
+  font-style: normal;
+}
