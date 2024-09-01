@@ -17,22 +17,20 @@ const projects = [
   {
     title: "Stop Motions Videos",
     src: "Cocktails.jpg",
-   
     link: "/stopmotionvideos",
-    description: "Photography",
+    description: "Videos",
   },
   {
     title: "Illustrationen",
     src: "Plakate.jpg",
-  
     link: "/illustrations",
     description: "Design",
   },
   {
     title: "Fotografie",
-    src: "Photography.jpg",
-  
+    src: "Fotografie.jpg",
     link: "/photography",
+    description: "Photography",
   },
 ];
 
