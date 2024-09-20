@@ -11,13 +11,13 @@
 .info {
   position: relative;
   display: flex;
-  align-items: flex-end; /* Beibehalten der vertikalen Ausrichtung */
+  align-items: flex-end; 
   top: 50%;
-  gap: 10%; /* Fester Abstand zwischen den Elementen */
+  gap: 10%; 
   padding-left: 10px;
   padding-right: 10px;
-  white-space: nowrap; /* Verhindert Zeilenumbrüche */
-  overflow: hidden; /* Verhindert, dass Inhalte außerhalb des Containers sichtbar werden */
+  white-space: nowrap;
+  overflow: hidden; 
 }
 .time {
   font-size: 1vw;
@@ -222,8 +222,8 @@
 
   .year {
     position: relative;
-    right: auto; /* Entfernt das `right`, um flexibles Layout zu ermöglichen */
-    margin-top: 10px; /* Fügt Abstand oben hinzu, falls nötig */
+    right: auto; 
+    margin-top: 10px; 
   }
   .info span {
     font-size: 12vw;
