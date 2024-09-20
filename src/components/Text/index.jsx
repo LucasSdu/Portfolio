@@ -17,7 +17,7 @@ export default function Paragraph({ paragraph }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.5", "start 0.2"],
+    offset: ["start 0.8", "start 0.4"],
   });
 
   const isMobile = () => {
@@ -29,22 +29,22 @@ export default function Paragraph({ paragraph }) {
 
 
   const desktopSizes = {
-    photography: { width: '50px', height: '50px' },
-    heart: { width: '50px', height: '50px' },
-    develop: { width: '50px', height: '50px' },
-    strong: { width: '60px', height: '60px' },
-    study: { width: '50px', height: '50px' },
-    passion: { width: '60px', height: '60px' },
+    photography: { width: '30px', height: '30px' },
+    heart: { width: '30px', height: '30px' },
+    develop: { width: '30px', height: '30px' },
+    strong: { width: '40px', height: '40px' },
+    study: { width: '30px', height: '30px' },
+    passion: { width: '35px', height: '35px' },
   };
 
  
   const mobileSizes = {
-    photography: { width: '30px', height: '30px' },
-    heart: { width: '30px', height: '30px' },
-    develop: { width: '30px', height: '30px' },
-    strong: { width: '35px', height: '35px' },
-    study: { width: '30px', height: '30px' },
-    passion: { width: '35px', height: '35px' },
+    photography: { width: '20px', height: '20px' },
+    heart: { width: '20px', height: '20px' },
+    develop: { width: '20px', height: '20px' },
+    strong: { width: '20px', height: '20px' },
+    study: { width: '20px', height: '20px' },
+    passion: { width: '20px', height: '20px' },
   };
 
   const [animationSizes, setAnimationSizes] = useState(desktopSizes);

@@ -14,10 +14,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        orange: "#151310",
+        black100: "#0D0F0F",
+        green100: "#BCF906",
+        orange100: "#F8F1EC",
         beige: "#FFFFFF",
-        white100: "#FFFFFF",
-        rot: "#FD3D00"
+        white100: "#f8f9fa",
+        rot100: "#88B2CC"
       },
       fontFamily: {
         pixel: ['Pixel', 'sans-serif'],

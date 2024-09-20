@@ -12,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     // Check if the user is on a mobile device
-    const checkIfMobile = () => window.innerWidth <= 767; // Adjust width based on your needs
+    const checkIfMobile = () => window.innerWidth <= 267; // Adjust width based on your needs
     setIsMobile(checkIfMobile());
 
     // Set path initially
@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   const setPath = (progress) => {
-    const width = window.innerWidth * 0.88;
+    const width = window.innerWidth * 1;
     path.current.setAttributeNS(null, "d", `M0 250 Q${width * x} ${250 + progress}, ${width} 250`);
   };
 

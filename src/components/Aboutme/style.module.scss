@@ -1,5 +1,6 @@
 .body {
-  background-color: #3C05FC;
+  background-color: #f8f9fa;
+  color: #0d0f0f;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,114 +8,53 @@
   overflow: hidden;
 }
 
-.locationText {
-  color: white;
-  position: fixed;
-  z-index: 99;
-  mix-blend-mode: difference;
-  top: 20px;
-  left: 35px;
-  font-size: 20px;
-  font-family: "Feoni", sans-serif;
-  text-align: left;
-}
-.locationText h1 {
-  opacity: 70%;
-}
-.name {
-  color: white;
-  mix-blend-mode: difference;
-  position: fixed;
-  top: 20px;
-  right: 35px;
-  font-size: 20px;
-  font-family: "Feoni", sans-serif;
-  z-index: 99;
-  text-align: left;
-}
-
-.name h1 {
-  opacity: 70%;
-}
 .info {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  align-items: center;
+  align-items: flex-end; /* Beibehalten der vertikalen Ausrichtung */
+  top: 50%;
+  gap: 10%; /* Fester Abstand zwischen den Elementen */
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: nowrap; /* Verhindert Zeilenumbrüche */
+  overflow: hidden; /* Verhindert, dass Inhalte außerhalb des Containers sichtbar werden */
+}
+.time {
+  font-size: 1vw;
 }
 .title {
-  margin-top: -14%;
+  font-size: 1.5vw;
+  font-family: "Playfair", sans-serif;
 }
-.info span {
-  color: #D4E9FB;
-  font-size: 8vw;
+
+.names {
+  font-size: 1vw;
 }
-.letter1 {
-  font-family: "Monsieur", serif;
+.birth {
+  font-size: 1vw;
 }
-.letter2 {
-  font-family: "FeoniLight", serif;
+.year {
+  position: a;
+  right: 10px;
+  font-size: 1vw;
 }
-.letter3 {
-  font-family: "FeoniLight", serif;
+.bezierkurve {
+  position: relative;
+  text-align: center;
+  top: 50%;
 }
-.letter4 {
-  font-family: "FeoniLight", serif;
-}
-.letter5 {
-  font-family: "FeoniLight", serif;
-}
-.letter6 {
-  font-family: "FeoniLight", serif;
-}
-.letter7 {
-  font-family: "FeoniLight", serif;
-}
+
 .heartContainer {
-  margin-top: 0px;
+  top: 55%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .heart {
-  width: 30px;
+  width: 20px;
   height: auto;
-}
-
-.container {
-  position: relative;
-  top: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  .bezierkurve {
-    text-align: center;
-
-    .line {
-      border: 0;
-      border-top: 1px solid #D4E9FB;
-      margin: 10px 50px;
-      z-index: 99;
-    }
-  }
-}
-.birth {
-  text-align: center;
-  font-family: "FeoniLight", sans-serif;
-  font-size: 20px;
-  color: #f0eeff;
-}
-.year {
-  text-align: center;
-  font-family: "FeoniLight", sans-serif;
-  font-size: 20px;
-  color: #f0eeff;
 }
 
 .containerItem {
@@ -122,13 +62,15 @@
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   right: 0;
-  padding: 35px;
-  color: #D4E9FB;
+  padding-right: 35px;
 }
 
 .lineItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   font-size: 30px;
   padding: 0px 0;
@@ -141,7 +83,7 @@
   display: block;
   position: absolute;
   height: 1px;
-  background-color: #D4E9FB;
+  background-color: #0d0f0f;
   width: 100%;
   left: 0;
 }
@@ -166,23 +108,22 @@
   font-size: 15px;
   width: 300px;
   font-family: "FeoniLight", sans-serif;
+  color: #f8f9fa;
 }
 
 .Title {
-  font-family: "FeoniMedium", sans-serif;
+  font-family: "FeoniLight", sans-serif;
 }
 
-.cls3{
-  fill: #D4E9FB;
+.cls3 {
+  fill: #0d0f0f;
 }
-
 
 .infofooter {
   font-family: "FeoniLight", sans-serif;
   display: flex;
   gap: 20px;
   left: 30px;
-  color: #D4E9FB;
   width: calc(100% - 40px);
   max-width: 1800px;
   position: absolute;
@@ -211,7 +152,6 @@
       flex-direction: column;
       gap: 15px;
     }
-
   }
 }
 @media (max-width: 768px) {
@@ -228,62 +168,64 @@
 
   .Text {
     display: none;
-
   }
 
-
-
-
   .bezierkurve {
-    display: none;
+    top:40%;
   }
 
   .container {
     top: 45%;
   }
-  .year,
-  .birth{
-    font-size: 10px;
-  }
+ 
 
   .locationText {
     left: 5px;
     font-size: 15px;
   }
 
-  .name {
-    right: 5px;
-    font-size: 15px;
-  }
+
 
   .info span {
     font-size: 12vw;
     margin: -10px;
   }
 
-
- 
-
   .infofooter {
-   display: none;
+    display: none;
   }
-
 
   .info {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5%; 
+    top: 40%;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
   }
+
+
   .title {
-    margin-top: -10%;
-    letter-spacing: 20px;
+    font-size: 4.5vw; 
+  }
+
+  .names {
+    font-size: 3.5vw;
+  }
+  .time, .birth, .year{
+    display: none;
+  }
+
+  .year {
+    position: relative;
+    right: auto; /* Entfernt das `right`, um flexibles Layout zu ermöglichen */
+    margin-top: 10px; /* Fügt Abstand oben hinzu, falls nötig */
   }
   .info span {
-    color: #D4E9FB;
     font-size: 12vw;
     gap: 2px;
   }
@@ -294,7 +236,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .heart {
     width: 20px;
     height: auto;

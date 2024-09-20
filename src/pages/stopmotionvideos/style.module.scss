@@ -11,105 +11,30 @@
   min-height: 100vh;
 }
 
-.locationText {
-  position: fixed;
-  z-index: 99;
-  mix-blend-mode: difference;
-  top: 20px;
-  left: 35px;
+.topbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:first baseline;
+  top: 40%;
+  white-space: nowrap;
+}
+
+.links {
   font-size: 20px;
-  font-family: "Feoni", sans-serif;
-  text-align: left;
-}
-.locationText h1 {
-  opacity: 70%;
-}
-.name {
-  mix-blend-mode: difference;
-  position: fixed;
-  top: 20px;
-  right: 35px;
-  font-size: 20px;
-  font-family: "Feoni", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   z-index: 99;
-  text-align: left;
-}
-
-.name h1 {
-  opacity: 70%;
-}
-
-
-
-
-.firstname {
   color: #151310;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 10vw;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 100px;
-    margin-top:  100px;
-  }
+}
 
-  .letter1 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter2 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter3 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter4 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter5 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter6 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter7 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter8 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter9 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter10 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter11 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter12 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter13 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter14 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter15 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter16 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter17 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter18 {
-    font-family: "FeoniLight", serif;
-  }
-  
+.topic {
+  color: #151310;
+  font-size: 50px;
+  text-align: center;
+  font-family: "FeoniLight", serif;
+  flex-grow: 1;
+}
   
   .videoGrid {
     display: flex;

@@ -6,85 +6,37 @@
   scroll-behavior: smooth;
 }
 
-.locationText {
-  position: fixed;
-  z-index: 99;
-  mix-blend-mode: difference;
-  top: 20px;
-  left: 35px;
+.topbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:first baseline;
+  top: 40%;
+  white-space: nowrap;
+}
+
+.links {
   font-size: 20px;
-  font-family: "Feoni", sans-serif;
-  text-align: left;
-}
-.locationText h1 {
-  opacity: 70%;
-}
-.name {
-  mix-blend-mode: difference;
-  position: fixed;
-  top: 20px;
-  right: 35px;
-  font-size: 20px;
-  font-family: "Feoni", sans-serif;
+  font-family: "FeoniLight", sans-serif;
   z-index: 99;
-  text-align: left;
-}
-
-.name h1 {
-  opacity: 70%;
-}
-
-
-
-
-.firstname {
   color: #151310;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 15vw;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 100px;
-  }
+  margin-left: 20px;
+}
 
-  .letter1 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter2 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter3 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter4 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter5 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter6 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter7 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter8 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter9 {
-    font-family: "FeoniLight", serif;
-  }
-  .letter10 {
-    font-family: "FeoniLight", serif;
-  }
+.topic {
+  color: #151310;
+  font-size: 50px;
+  text-align: center;
+  font-family: "FeoniLight", serif;
+  flex-grow: 1;
+}
 
 .imageWrapper {
   display: flex;
   justify-content: center;
   padding: 20px;
-  padding-top: 500px;
+  padding-top: 300px;
 }
 
 .imageWrapper.left {
@@ -106,10 +58,9 @@
 }
 
 @media (max-width: 768px) {
-
-.space{
-  margin-bottom: 200px;
-}
+  .space {
+    margin-bottom: 200px;
+  }
   .imageWrapper {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -133,7 +84,7 @@
   }
 
   .firstname-container {
-    padding-top: 20px; 
+    padding-top: 20px;
   }
 
   .firstname {

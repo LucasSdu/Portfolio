@@ -6,15 +6,22 @@
 .paragraph {
   display: flex;
   flex-wrap: wrap;
-  font-size: 60px;
+  justify-content:baseline;
+  font-size: 40px;
   line-height: 1;
   font-family: "FeoniLight", serif;
-  color: #151310;
+  color: #282828;
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  width: 50%;
+  overflow-wrap: break-word;
+  hyphens: auto; 
+  word-break: break-word;
 }
 
 .word {
   position: relative;
-  margin-right: 20px;
+  margin-right: 15px;
   margin-top: 15px;
 }
 
@@ -45,12 +52,13 @@ display: none;
   .paragraph {
     display: flex;
     flex-wrap: wrap;
-    font-size: 7.25vw;
+    font-size: 5vw;
     line-height: 1;
     padding-left: 0; 
     padding-right: 0;
     font-family: "FeoniMedium", serif;
     color: #151310;
+    width: 100%;
   }
   
   .word {

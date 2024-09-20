@@ -10,76 +10,32 @@
   position: relative;
   min-height: 100vh;
 }
-.locationText {
-  position: fixed;
-  z-index: 99;
-  mix-blend-mode: difference;
-  top: 20px;
-  left: 35px;
-  font-size: 20px;
-  font-family: "Feoni", sans-serif;
-  text-align: left;
-}
-.locationText h1 {
-  opacity: 70%;
-}
-.name {
-  mix-blend-mode: difference;
-  position: fixed;
-  top: 20px;
-  right: 35px;
-  font-size: 20px;
-  font-family: "Feoni", sans-serif;
-  z-index: 99;
-  text-align: left;
+
+.topbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:first baseline;
+  top: 40%;
+  white-space: nowrap;
 }
 
-.name h1 {
-  opacity: 70%;
-}
-
-.firstname {
+.links {
+  font-size: 20px;
+  font-family: "FeoniLight", sans-serif;
+  z-index: 99;
   color: #151310;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 15vw;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 100px;
 }
 
-.letter1 {
+.topic {
+  color: #151310;
+  font-size: 50px;
+  text-align: center;
   font-family: "FeoniLight", serif;
+  flex-grow: 1;
 }
-.letter2 {
-  font-family: "FeoniLight", serif;
-}
-.letter3 {
-  font-family: "FeoniLight", serif;
-}
-.letter4 {
-  font-family: "FeoniLight", serif;
-}
-.letter5 {
-  font-family: "FeoniLight", serif;
-}
-.letter6 {
-  font-family: "FeoniLight", serif;
-}
-.letter7 {
-  font-family: "FeoniLight", serif;
-}
-.letter8 {
-  font-family: "FeoniLight", serif;
-}
-.letter9 {
-  font-family: "FeoniLight", serif;
-}
-.letter10 {
-  font-family: "FeoniLight", serif;
-}
+
 
 .videoWrapper {
   display: flex;
@@ -87,7 +43,7 @@
   padding: 20px;
   width: 100%;
   max-width: 800px;
-  margin-top: 400px;
+  margin-top: 200px;
 }
 
 .video {
@@ -157,14 +113,5 @@
 
 
 
-  .firstname-container {
-    padding-top: 20px;
-    text-align: center;
-  }
 
-  .firstname {
-    font-size: 15vw;
-    padding-top: 80px;
-    margin: 0;
-  }
 }

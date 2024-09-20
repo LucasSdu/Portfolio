@@ -10,7 +10,6 @@ const projects = [
   {
     title: "Dishcovery",
     src: "Dishcovery.jpg",
-  
     link: "/dishcovery",
     description: "Design & Development",
   },

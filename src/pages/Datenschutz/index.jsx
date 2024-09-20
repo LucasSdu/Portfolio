@@ -1,45 +1,11 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
-import Footer from '../../components/Footer';
+import Magnetic from "../../components/Magnetic";
 import Lenis from "@studio-freight/lenis";
 
 export default function ContactPage() {
-  const TimeInGermany = () => {
-    const [time, setTime] = useState("");
-
-    useEffect(() => {
-      const lenis = new Lenis();
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    }, []);
-
-    useEffect(() => {
-      const updateTime = () => {
-        const options = {
-          hour: "2-digit",
-          minute: "2-digit",
-          timeZone: "Europe/Berlin",
-          hour12: true,
-        };
-        const formatter = new Intl.DateTimeFormat("en-US", options);
-        const formattedTime = formatter.format(new Date());
-        setTime(formattedTime);
-      };
-
-      updateTime();
-      const intervalId = setInterval(updateTime, 1000);
-
-      return () => clearInterval(intervalId);
-    }, []);
-
-    return <span className={styles.time}>{time}</span>;
-  };
+  
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -54,24 +20,21 @@ export default function ContactPage() {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-      <div className={styles.name}>
-          <button className={styles.name} onClick={() => window.history.back()}>
-            <h1>Lucas Sdunnek:</h1>
-            <div className={styles.roles}>
-              <span>Designer & Developer</span>
-            </div>
-          </button>
-        </div>
-
-        <div className={styles.locationText}>
-          <h1>Location:</h1>
-          <div className={styles.time}>
-            Germany, (<TimeInGermany />){" "}
+      <div className={styles.topbar}>
+          <div className={styles.links}>
+            <Magnetic>
+              <button
+                className={styles.name}
+                onClick={() => window.history.back()}
+              >
+                <h1>Home</h1>
+              </button>
+            </Magnetic>
           </div>
+
+          <div className={styles.topic}>Datenschutzerklärung</div>
         </div>
-        <h1 className={styles.title}>Datenschutzerklärung</h1>
         <p className={styles.text}>
-          Datenschutzerklärung<br />
           Geltungsbereich<br />
           Diese Datenschutzerklärung soll die Nutzer dieser Website gemäß Bundesdatenschutzgesetz und Telemediengesetz über die Art, den Umfang und den Zweck der Erhebung und Verwendung personenbezogener Daten durch den Websitebetreiber (<a href="/impressum">Lucas Sdunnek</a>, hier klicken für <a href="/impressum">Kontaktdaten</a>) informieren.<br /><br />
           Der Websitebetreiber nimmt Ihren Datenschutz sehr ernst und behandelt Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Vorschriften.<br />
@@ -99,9 +62,6 @@ export default function ContactPage() {
         <div className="mb-96"></div>
       </div>
       <div style={{ backgroundColor: "#ffffff", height: "50vh" }}></div>
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 88vw;
+    width: 100vw;
     margin: -60px;
   }  
  
@@ -26,8 +26,8 @@
   }
   
   .line svg path{
-    stroke:  #FCE405;
-    stroke-width: 1px;
+    stroke:  #ccff33;
+    stroke-width: 2px;
     fill: none;
   }
   
@@ -42,12 +42,4 @@
   .line .box:hover{
     height: 500px;
     top: -250px;
-  }
-
-  @media (max-width: 768px) {
-    .body{
-  
-      width: 70vw;
-      margin: -0px;
-    }  
   }

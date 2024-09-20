@@ -1,47 +1,10 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
-import Lenis from "@studio-freight/lenis";
-
-import Footer from "../../components/Footer";
+import Magnetic from "../../components/Magnetic";
 
 export default function Phorography() {
-  const TimeInGermany = () => {
-    const [time, setTime] = useState("");
-
-    useEffect(() => {
-      const lenis = new Lenis();
-  
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-  
-      requestAnimationFrame(raf);
-    }, []);
-
-    useEffect(() => {
-      const updateTime = () => {
-        const options = {
-          hour: "2-digit",
-          minute: "2-digit",
-          timeZone: "Europe/Berlin",
-          hour12: true,
-        };
-        const formatter = new Intl.DateTimeFormat("en-US", options);
-        const formattedTime = formatter.format(new Date());
-        setTime(formattedTime);
-      };
-
-      updateTime();
-      const intervalId = setInterval(updateTime, 1000);
-
-      return () => clearInterval(intervalId);
-    }, []);
-
-    return <span className={styles.time}>{time}</span>;
-  };
-
   const images = [
     {
       url: "https://res.cloudinary.com/dexbbnuzu/image/upload/q_auto/rjzzi0au5vehknfpdly4",
@@ -152,29 +115,21 @@ export default function Phorography() {
       className={`relative min-h-screen flex flex-col cursor-default bg-white ${styles["full-height-container"]}`}
     >
       <main className={styles.main}>
-      <div className={styles.name}>
-          <button className={styles.name} onClick={() => window.history.back()}>
-            <h1>Lucas Sdunnek:</h1>
-            <div className={styles.roles}>
-              <span>Designer & Developer</span>
-            </div>
-          </button>
-        </div>
-
-        <div className={styles.locationText}>
-          <h1>Location:</h1>
-          <div className={styles.time}>
-            Germany, (<TimeInGermany />){" "}
+      <div className={styles.topbar}>
+          <div className={styles.links}>
+            <Magnetic>
+              <button
+                className={styles.name}
+                onClick={() => window.history.back()}
+              >
+                <h1>Home</h1>
+              </button>
+            </Magnetic>
           </div>
+
+          <div className={styles.topic}>Fotografie</div>
         </div>
 
-        <div className={styles.firstname}>
-          {"Fotografie".split("").map((letter, index) => (
-            <span key={index} className={styles[`letter${index + 1}`]}>
-              {letter}
-            </span>
-          ))}
-        </div>
         <div className={styles.space}></div>
         {images.map((image, index) => (
           <div
@@ -190,12 +145,6 @@ export default function Phorography() {
           </div>
         ))}
       </main>
-
-      <div style={{ backgroundColor: "#ffffff", height: "50vh" }}></div>
-
-      <section>
-        <Footer />
-      </section>
     </div>
   );
 }

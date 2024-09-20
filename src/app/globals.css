@@ -75,8 +75,8 @@ body {
 }
 
 @font-face {
-  font-family: "Monsieur";
-  src: url("../../public/fonts/MonsieurLaDoulaise-Regular.ttf");
+  font-family: "Playfair";
+  src: url("../../public/fonts/PlayfairDisplay-Medium.ttf");
   font-weight: medium;
   font-style: normal;
 }

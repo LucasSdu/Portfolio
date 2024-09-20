@@ -4,10 +4,10 @@
   width: 100%;
   padding-bottom: 50px;
   padding-top: 50px;
-  border-bottom: 1px solid rgb(201, 201, 201);
+  border-bottom: 1px solid #0D0F0F;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  
+  color:#0D0F0F;
 }
 
 .projectContent {
@@ -19,10 +19,10 @@
 }
 
 .project h2 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 400;
   font-family: "FeoniMedium", sans-serif;
-  color: #151310;
+
   position: relative;
   overflow: hidden;
   padding-bottom: 5px;
@@ -36,7 +36,6 @@
 .projectDescription {
   font-family: "FeoniLight", sans-serif;
   font-size: 16px;
-  color: #151310;
   transition: transform 0.3s ease, filter 0.2s ease;
 }
 
@@ -56,8 +55,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
-
 }
 
 .modalContainer {
@@ -100,8 +97,9 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #3C05FC;
-  color: #D4E9FB;
+  background-color: #BCF906;
+  color:#0D0F0F;
+
   position: fixed;
   z-index: 3;
   display: flex;
@@ -137,7 +135,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    border-bottom: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: opacity 0.2s ease;
   }
@@ -155,7 +152,7 @@
     margin: 0 20px 0 0;
     font-weight: 100;
     font-family: "Feoni", sans-serif;
-    color: #151310;
+   
     position: relative;
     overflow: hidden;
     padding-bottom: 0px;
@@ -164,7 +161,7 @@
   .projectDescription {
     font-family: "Feoni", sans-serif;
     font-size: 10px;
-    color: #151310;
+
     transition: transform 0.3s ease;
   }
 

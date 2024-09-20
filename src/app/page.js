@@ -7,8 +7,8 @@ import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 import AboutMe from "../components/Aboutme";
 import Text from "../components/Text";
-
 import Footer from "../components/Footer";
+import Title from "../components/title";
 
 export default function Home() {
   const paragraph =
@@ -30,33 +30,34 @@ export default function Home() {
       className={`relative min-h-screen flex flex-col cursor-default bg-white100 ${styles["full-height-container"]}`}
     >
       <main className={styles.main}>
-        <AboutMe />
-        <div className="lg:mb-20 md:mb-1"></div>
+        <div>
+          <AboutMe />
+<div className={styles.topic}>
+<div className={styles.text}>Über mich</div>
 
-        <div className={styles.container}>
-          <Text paragraph={paragraph} />
+  <hr style={{ border: '1px solid #BCF906', width: '30%' }} />
+</div>
+          
 
-          <div className="lg:mb-96 mb-28"></div>
 
-          <div className={styles.titleProjects}>
-            <h1>Ausgewählte Projekte</h1>
-          </div>
-
-          <Projects />
+        <div className={styles.aboutme}>
+        <Text paragraph={paragraph} />
+        </div>
+         
         </div>
 
-        <div className="lg:mb-96 md:mb-1"></div>
+        <div className={styles.topic}>
+<div className={styles.text}>Projekte</div>
 
-        <div className="mt-96">
+  <hr style={{ border: '1px solid #BCF906', width: '30%' }} />
+</div>
+        <div className={styles.containerProjects}>
+          <Projects />
+        </div>
+        <div>
           <Contact />
         </div>
       </main>
-
-      <div style={{ backgroundColor: "#fffff", height: "50vh" }}></div>
-
-      <section>
-        <Footer />
-      </section>
     </div>
   );
 }
