@@ -7,8 +7,7 @@ import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 import AboutMe from "../components/Aboutme";
 import Text from "../components/Text";
-import Footer from "../components/Footer";
-import Title from "../components/title";
+
 
 export default function Home() {
   const paragraph =
