@@ -77,18 +77,30 @@ export default function ContactPage() {
             </Magnetic>
           </div>
 
-          <div className={styles.topic}>Dishcovery</div>
+          <h1 className={styles.topic}>Dishcovery</h1>
         </div>
+        <p class={styles.text}>
+          "Dishcovery" ist eine Rezept-App mit einer intuitiven
+          "Swipe"-Mechanik, bei der Nutzer Rezepte nach rechts zu ihrem
+          persönlichen Kochbuch hinzufügen oder nach links verwerfen können. Die
+          App bietet Filterfunktionen für Schwierigkeit, Preis und Dauer. <br />
+          Angemeldete Nutzer können ihr persönliches Kochbuch verwalten, eigene
+          Rezepte erstellen und hochladen sowie Rezepte bewerten, um die
+          Community zu unterstützen. Ein Gastzugang erlaubt das Entdecken der
+          Rezepte ohne Speicherfunktion. Die Benutzeroberfläche zeigt eine
+          übersichtliche Rezeptvorschau mit allen wichtigen Informationen und
+          eine Detailansicht mit Zutaten und Zubereitungsschritten. <br />In diesem
+          Projekt war ich für das UX-Design (Figma) und die Frontend-Entwicklung
+          (Svelte) verantwortlich. Als Backend-Lösung kam Supabase zum Einsatz.
+        </p>
         <div className={styles.space}></div>
-        <div className={styles.videoWrapper}>
-          <video
-            className={styles.video}
-            controls
-            src="https://res.cloudinary.com/dexbbnuzu/video/upload/v1723726124/fq0l64mujyhdgzjzqk8g.mp4"
-          >
-            Dein Browser unterstützt dieses Video-Format nicht.
-          </video>
-        </div>
+        <iframe
+          src="https://dishcoverme.vercel.app/"
+          width="800"
+          height="700"
+          allowFullScreen // Hinweis: 'allowfullscreen' wird oft zu 'allowFullScreen' in React
+          style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }} // Hier ist die Korrektur!
+        ></iframe>
         {images.map((image, index) => (
           <div
             key={index}

@@ -11,7 +11,7 @@ const projects = [
     title: "Dishcovery",
     src: "Dishcovery.jpg",
     link: "/dishcovery",
-    description: "Design & Development",
+    description: "Webdesign & Programmierung",
   },
   {
     title: "Stop Motions Videos",
@@ -29,7 +29,7 @@ const projects = [
     title: "Fotografie",
     src: "Fotografie.jpg",
     link: "/photography",
-    description: "Photography",
+    description: "Fotografie",
   },
 ];
 

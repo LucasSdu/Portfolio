@@ -59,13 +59,13 @@ export default function Index() {
     <div ref={container} className={styles.body}>
       <div className={styles.info}>
         <div className={styles.birth}>1999</div>
-        <div className={styles.title}>Creative Designer & Developer</div>
+        <h1 className={styles.title}>Creative Freelance Webdesigner & Developer</h1>
 
-        <div className={styles.names}>Lucas Sdunnek</div>
+        <h1 className={styles.names}>Lucas Sdunnek</h1>
         <div className={styles.time}>
           51.6739° N / 7.8150° E, (<TimeInGermany />)
         </div>
-        <div className={styles.year}>2024</div>
+        <div className={styles.year}>2025</div>
       </div>
       <div className={styles.bezierkurve}>
         <Bezierkurve />
@@ -73,11 +73,11 @@ export default function Index() {
 
       <div className={styles.containerItem}>
         <div className={styles.lineItem}>
-          <div className={styles.Title}>UI, UX</div>
-          <div className={styles.Title}>WITH</div>
+          <h2 className={styles.Title}>WEBDESIGNER</h2>
+          <h2 className={styles.Title}>WITH</h2>
         </div>
         <div className={styles.lineItem}>
-          <div className={styles.Title}>& WEB</div>
+          <h2 className={styles.Title}>& UX</h2>
           <div className={styles.heartContainer}>
             <motion.svg
               viewBox="0 0 45.57 37.56"
@@ -100,32 +100,10 @@ export default function Index() {
           </div>
         </div>
         <div className={styles.lineItem}>
-          <div className={styles.Title}>DESIGN</div>
+          <div className={styles.Title}>DESIGNER</div>
         </div>
         <div className={styles.lineItem}>
           <div className={styles.Text}></div>
-        </div>
-      </div>
-
-      <div className={styles.infofooter}>
-        <div>
-          <span>
-            <p className={styles.nonClickableText}>2024 © Edition</p>
-          </span>
-        </div>
-        <div>
-          <span>
-            <Magnetic>
-              <a href="/impressum" className={styles.link}>
-                <p>Impressum</p>
-              </a>
-            </Magnetic>
-          </span>
-          <Magnetic>
-            <a href="/Datenschutz" className={styles.link}>
-              <p>Datenschutz</p>
-            </a>
-          </Magnetic>
         </div>
       </div>
     </div>

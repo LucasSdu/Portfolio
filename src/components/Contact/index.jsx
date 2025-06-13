@@ -54,10 +54,7 @@ export default function Index({ isActive, toggleMenu }) {
         <div className={styles.body}>
           <div className={styles.title}>
             <div className={styles.firstword}>
-              <span className={styles.letter}>Schreiben</span>
-            </div>
-            <div className={styles.lastword}>
-              <span className={styles.letter}>Sie mir</span>
+              <span className={styles.letter}>Lassen Sie <br /> uns zusammenarbeiten</span>
             </div>
 
            
