@@ -80,8 +80,8 @@ export default function ContactPage() {
           <h1 className={styles.topic}>Dishcovery</h1>
         </div>
         <p class={styles.text}>
-          "Dishcovery" ist eine Rezept-App mit einer intuitiven
-          "Swipe"-Mechanik, bei der Nutzer Rezepte nach rechts zu ihrem
+          Dishcovery ist eine Rezept-App mit einer intuitiven
+          Swipe-Mechanik, bei der Nutzer Rezepte nach rechts zu ihrem
           persönlichen Kochbuch hinzufügen oder nach links verwerfen können. Die
           App bietet Filterfunktionen für Schwierigkeit, Preis und Dauer. <br />
           Angemeldete Nutzer können ihr persönliches Kochbuch verwalten, eigene
